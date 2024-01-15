@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+#portfolio {
+    padding: 70px 30px;
+}
+
+#portfolio .port-row {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 35px;
+    text-decoration: none;
+    list-style: none;
+}
+
+#portfolio .port-row .port-item {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 20%);
+    cursor: pointer;
+}
+
+#portfolio .port-row .port-item .port-img img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+#portfolio .port-row .port-item .port-info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #001f1e;
+    /* background-image: url(/images/higePass.png); */
+    padding: 0 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transform: scale(0);
+    transition: 0.5s;
+    border-radius: 10px;
+    visibility: hidden;
+}
+
+#portfolio .port-row .port-item:hover .port-info {
+    transform: scale(1);
+    visibility: visible;
+}
+
+#portfolio .port-row .port-item .port-info h3 {
+    color: aqua;
+}
+
+#portfolio .port-row .port-item .port-info h3 + p {
+    color: aqua;
+}
+#portfolio .port-row .port-item .port-info a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: antiquewhite;
+    border-radius: 50%;
+    color: #121521;
+    line-height: 46px;
+    transition: 0.4s;
+}
+
+#portfolio .port-row .port-item .port-info a svg {
+    max-width: 35px;
+    max-height: 35px;
+    text-align: center;
+}
+#portfolio .port-row .port-item .port-info a:hover {
+    background-color: rgb(13, 15, 17);
+    color: rgb(242, 245, 245);
+}
+
+
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.arrow span {
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-top: 5px solid #06A8FF;
+    /* border-right: 5px solid #06A8FF; */
+    border-left: 5px solid #06A8FF;
+    transform: rotate(45deg);
+    margin: -10px;
+    animation: scroll 2s infinite;
+}
+
+.arrow span:nth-child(2) {
+    animation-delay: -.2s;
+}
+
+.arrow span:nth-child(3) {
+    animation-delay: -.4s;
+}
+
+@keyframes scroll {
+    0%{
+        opacity: 1;
+        transform: rotate(45deg) translate(-20px, -20px);
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        transform: rotate(45deg) translate(20px, 20px);
+    }
+    
+}
+
+#portfolio .port-row .port-item:hover .arrow {
+    display: none;
+    visibility: hidden;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <h2 class="form__title list-reset">
+            Login&nbsp;<span class="type"></span>
+        </h2>
+        <form id="form">
+            <div class="inputContainer">
+                <input type="text" class="inputAll nameInput" id="nameInput" placeholder="">
+                <label class="labelName">Введите Ваш имя</label>
+                <span class="errorName" id="errorName"></span>
+            </div>
+            <div class="inputContainer">
+                <input type="text" class="inputAll surnameInput" id="surnameInput" placeholder="">
+                <label class="labelName">Введите Ваш фамилия</label>
+                <span class="errorSurName" id="errorSurName"></span>
+            </div>
+            <div class="inputContainer">
+                <input type="text" class="inputAll lastnameInput" id="lastnameInput" placeholder="">
+                <label class="labelName">Введите Ваш отчество</label>
+                <span class="lastName" id="errorLastName"></span>
+            </div>
+            <div class="inputContainer">
+                <input type="date" class="inputAll ageInput" id="ageInput" placeholder="">
+                <label class="labelName">Введите Ваш возраст</label>
+                <span class="errorAge" id="errorAge"></span>
+            </div>
+            <div class="inputContainer lastBox">
+                <input type="password" class="inputAll passwordInput" id="password" placeholder="">
+                <label class="labelName"> Введите Ваш пароль</label>
+                <span class="errorPassword" id="errorPassword"></span>
+            </div>
+            <button class="form-btn" id="button">Отправить</button>
+        </form>
+
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+@media (max-width: 1200px) {
+    .clients__wrapper {
+        overflow: auto;
+    }    
+}
+
+
+@media all and (max-width: 500px) {
+    .modal__content {
+        max-width: 375px;
+    }
+    .modal__form {
+        max-width: 315px;
+    }  
+
+    .contact {
+        width: 315px;
+    }
+}
+
+@media (max-width: 468px) {
+    .find-list__link {
+        font-size: 10px;
+    }
+    
+}
+
+@media all and (max-width: 390px) {
+    .modal__content {
+        max-width: 290px;
+    }
+    .modal__form {
+        max-width: 225px;
+    }  
+
+    .contact {
+        width: 280px;
+    }
+}
+
+@media (max-width: 393px) {
+    .delete-modal__content {
+        min-width: 260px;
+    }
+
+    .find-list__link {
+        font-size: 10px;
+    }
+}

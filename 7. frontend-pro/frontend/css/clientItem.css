@@ -1,0 +1,163 @@
+.clients__table {
+    width: 100%;
+    min-width: 1186px;
+    margin-bottom: 40px;
+}
+
+.clients__item {
+    display: flex;
+    padding: 18px;
+    padding-left: 11px;
+    border-bottom: 1px solid var(--color-gray-suit);
+    background-color: #fff;
+}
+
+.client__id {
+    width: 7%;
+    display: flex;
+    align-items: center;
+    font-size: 10px;
+    margin-right: 8px;
+    color: var(--color-silver-chalice);
+}
+
+.clients__full-name {
+    width: calc(32% + 5px);
+    font-size: 14px;
+    color: var(--color-black3);
+}
+
+.clients__full-name span {
+    display: inline-block;
+}
+
+.clients__full-name span:not(:last-child) {
+    margin-right: 5px;
+}
+
+.clients__created {
+    width: calc(15% - 1px);
+}
+
+.clients__changed {
+    width: calc(15% + 6px);
+    padding-left: 5px;
+}
+
+.created__date,
+.changed__date {
+    margin-right: 7px;
+    font-size: 14px;
+    color: var(--color-black3);
+}
+
+.created__time,
+.changed__time {
+    font-size: 14px;
+    color: var(--color-silver-chalice);
+}
+
+.clients__contacts {
+    margin: -10px 2px -17px 0;
+    max-width: 120px;
+    min-width: 120px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.clients__actions {
+    display: flex;
+    align-items: center;
+}
+
+.clients__actions button {
+    display: inline-block;
+    font-size: 14px;
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-color: transparent;
+    padding-left: 20px;
+    color: var(--color-black3);
+}
+
+.clients__edit {
+    position: relative;
+    transition: color .3s ease-in-out;
+    margin-right: 32px;
+    background-image: url('../img/edit.svg');
+}
+
+.clients__delete {
+    position: relative;
+    transition: color .3s ease-in-out;
+    margin-right: 32px;
+    background-image: url('../img/cancel.svg');
+}
+
+.clients__edit:hover {
+    transition: color .3s ease-in-out;
+    color: var(--color-emerald);
+}
+
+.clients__delete:hover {
+    transition: color .3s ease-in-out;
+    color: var(--color-burnt-sienna);
+}
+
+.contacts__link {
+    position: relative;
+    width: 16px;
+    height: 16px;
+    margin-bottom: 7px;
+}
+
+.contacts__link g,
+.contacts__link path {
+    transition: opacity .3s ease-in-out;
+}
+
+.contacts__link:hover g,
+.contacts__link:hover path {
+    opacity: 1;
+    transition: opacity .3s ease-in-out;
+}
+
+.contacts__link:not(:last-child) {
+    margin-right: 7px;
+}
+
+.action-wait {
+    background-image: none;
+}
+
+.actions__spinner {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: spinner .3s ease-in-out;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.clients__edit .actions__spinner svg {
+    stroke: var(--color-emerald);
+    fill: none;
+}
+
+.clients__delete .actions__spinner svg {
+    stroke: var(--color-burnt-sienna);
+    fill: none;
+}
+
+@keyframes spinner {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    100% {
+        transform: rotate(360deg)
+    }
+}

@@ -1,0 +1,277 @@
+.hero {
+    padding-top: 250px;
+    padding-bottom: 100px;
+    background-image: linear-gradient(var(--aztec-color), var(--liner-rgba)), url(/img/man.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.hero__content {
+    color: var(--second-color);
+    font-family: "Gordita";
+    line-height: 40px;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 40px;
+}
+
+.hero__textAnimation {
+    position: relative;
+    max-width: 47.5rem;
+}
+
+.hero__title {
+    font-size: 64px;
+    font-family: "Cruin";
+    font-weight: 700;
+    color: transparent;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 2px;
+    -webkit-text-stroke: .7px var(--help-color);
+    background-image: linear-gradient(var(--help-color), var(--help-color));
+    background-repeat: no-repeat;
+    background-clip: text;
+    background-position: -5rem 0;
+    animation: homeBgtext 6s linear infinite;
+    animation-delay: 2s;
+}
+
+.hero__title::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    border-right: 2px solid var(--second-color);
+    z-index: 1;
+    animation: homeCursorText 6s linear infinite;
+    animation-delay: 2s;
+}
+
+@keyframes homeCursorText {
+    0%, 10%, 100% {
+        width: 0;
+    }  
+    65%, 78%, 85% {
+        width: 100%;
+        opacity: 1;
+    }
+    75%, 81% {
+        opacity: 0;
+    }
+}
+
+@keyframes homeBgtext {
+    0%,10%,100% {
+        background-position: -50rem 0;
+    }  
+    65%,85% {
+        background-position: 0 0;
+    }
+}
+
+.hero__little {
+    display: block;
+    color: var(--second-color);
+    font-family: "Cruin";
+    font-size: 24px;
+    line-height: normal;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 55px;
+    animation: heroLitlle 6s linear infinite;
+    animation-delay: 2s;
+}
+
+@keyframes heroLitlle {
+    0%, 50%{
+        opacity: 0;
+    }
+    70% {
+        opacity: .5;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.hero__text {
+    display: block;
+    color: var(--hero-text);
+    font-family: "Gordita";
+    font-size: 32px;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 50px;
+}
+
+.hero__btn {
+    position: relative;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    color: var(--black-color);
+    font-family: "Gordita";
+    letter-spacing: 1.2px;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 100px;
+    background: var(--help-color);
+    padding-left: 32px;
+    padding-right: 48px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border-radius: 10px;
+    transition: box-shadow .5s ease-in-out, transform .5s ease-in-out;
+}
+
+.hero__btn::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    box-sizing: content-box;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 22px;
+}
+
+.svg-download-dims {
+    position: absolute;
+    top: 23%;
+    right: 5%;
+    width: 15%;
+    height: 50%;
+    transition: transform .5s ease-in-out;
+}
+
+.svg-download-dims use {
+    stroke: var(--black-color);
+}
+
+.hero__btn:hover {
+    box-shadow: 0 0 5px var(--help-color),
+                0 0 25px var(--help-color),
+                0 0 50px var(--help-color);
+    transition: box-shadow .5s ease-in-out;
+}
+
+.hero__btn:hover .svg-download-dims {
+    transform: scale(1.3);
+    transition: transform .5s ease-in-out;
+}
+
+/* social media */
+.social__link {
+    display: flex;
+    list-style-type: none;
+}
+
+.social__item {
+    width: 55px;
+    height: 55px;
+    border: 1px solid var(--help-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+    transition: all .3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.social__item::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    box-sizing: content-box;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+}
+
+.tooltip {
+    width: 100px;
+    position: absolute;
+    top: 0;
+    font-family: "Gordita";
+    font-weight: bolder;
+    font-size: 16px;
+    background: var(--second-color);
+    color: var(--black-color);
+    text-align: center;
+    padding: 5px 5px;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, .1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all .3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.tooltip::before {
+    position: absolute;
+    content: '';
+    height: 8px;
+    width: 8px;
+    background: var(--second-color);
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    transition: all .3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.social__item:hover .tooltip {
+    top: -45px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    text-align: center;
+    transition: all .3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.social__item:not(:last-child) {
+    margin-right: 20px;
+}
+
+.svg-phone-dims,
+.svg-telegramm-dims,
+.svg-github-dims {
+    width: 25px;
+    height: 25px;
+}
+
+.svg-phone-dims use,
+.svg-telegramm-dims use,
+.svg-github-dims use {
+    fill: var(--second-color);
+    transition: fill .3s ease-in-out;
+}
+.social__item:hover {
+    background: var(--help-color);
+    border: 1px solid var(--second-color);
+}
+.social__item:hover .svg-phone-dims use {
+    fill: var(--aztec-color);
+    transition: fill .3s ease-in-out;
+}
+.social__item:hover .svg-telegramm-dims use {
+    fill: var(--black-color);
+    transition: fill .3s ease-in-out;
+}
+.social__item:hover .svg-github-dims use {
+    fill: var(--black-color);
+    transition: fill .3s ease-in-out;
+}

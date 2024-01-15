@@ -1,0 +1,192 @@
+@media (max-width: 1920px) {
+    .skills__list {
+        position: relative;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        align-items: center;
+        justify-content: center;
+        grid-gap: 35px;
+        list-style-type: none;
+    }
+
+    .skills__item {
+        width: 350px;
+    }
+}
+
+@media (max-width: 1625px) {
+    .skills__list {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+}
+
+
+@media (max-width: 1545px) {
+    .skills__item {
+        width: 300px;
+    }
+}
+
+@media (max-width: 1425px) {
+    .skills__list {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .skills__item {
+        width: 250px;
+    }
+
+    .projects__list {
+        --elementsMedia: 3;
+    }
+
+    /* .projects__item:nth-last-child(-n+2) {
+        display: none;
+    } */
+    .projects__item--arrow span {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .header__btn--container {
+        margin-right: 45px;
+    }
+    .nav {
+        width: 350px;
+        position: absolute;
+        right: -350px;
+        top: 0;
+        margin: 0;
+        background-color: var(--thrid-color);
+        visibility: hidden;
+        backdrop-filter: blur(10px);
+        z-index: 1;
+        padding: 100px 20px 100px 40px;
+        transition: transform .5s ease-in-out, visibility .5s ease-in-out;
+        will-change: transform;
+    }
+
+    .burger__menu {
+        display: block;
+    }
+
+    .nav__list {
+        display: block;
+    }
+
+    .nav__item:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .nav__link {
+        color: var(--aztec-color);
+        display: block;
+        padding: 10px 0;
+    }
+
+    /* hero */
+    .hero__content {
+        line-height: 34px;
+        font-size: 26px;
+    }
+
+    .hero__textAnimation {
+        max-width: 38.5rem;
+    }
+
+    .hero__title {
+        font-size: 52px;
+        background-position: -5rem 0;
+    }
+
+    @keyframes homeBgtext {
+
+        0%,
+        10%,
+        100% {
+            background-position: -40rem 0;
+        }
+
+        65%,
+        85% {
+            background-position: 0 0;
+        }
+    }
+
+    .hero__text {
+        font-size: 26px;
+    }
+
+    /* about */
+    .about__title {
+        width: 50%;
+        font-size: 48px;
+    }
+
+    .about__title--child {
+        font-size: 48px;
+    }
+
+    .about__text {
+        font-size: 20px;
+        line-height: 36px;
+    }
+
+    /* skills */
+    .skills__item:nth-last-child(-n+2) {
+        display: none;
+    }
+
+}
+
+@media (max-width: 992px) {
+    .inner__title {
+        font-size: 16px;
+    }
+    .inner__text {
+        font-size: 12px;
+        margin-bottom: 16px;
+    }
+    .inner__text span {
+        font-size: 12px;
+    }
+    .footer__nav {
+        display: none;
+    }
+
+}
+
+@media (max-width: 733px) {
+
+    /* hero */
+    .hero__content {
+        line-height: 34px;
+        font-size: 26px;
+    }
+
+    .hero__textAnimation {
+        max-width: 30rem;
+    }
+
+    .hero__title {
+        font-size: 40px;
+        background-position: -5rem 0;
+    }
+
+    @keyframes homeBgtext {
+        0%,10%,100% {
+            background-position: -31rem 0;
+        }
+        65%,85% {
+            background-position: 0 0;
+        }
+    }
+
+    .hero__text {
+        font-size: 22px;
+    }
+}

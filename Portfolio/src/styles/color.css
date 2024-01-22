@@ -1,6 +1,7 @@
 :root {
     --aztec-color: #111F1E;
     --second-color: #EDEDED;
+    --sec-bg-color: #EFEEE8;
     --thrid-color: #edededbe;
     --white-color: #FFF;
     --help-color: rgb(4, 243, 16);
@@ -24,6 +25,7 @@
     --angile-circle-color: rgb(173, 223, 198);
     --inner-btn-color: rgb(48, 247, 4);
     --pr-btn-color: rgba(11, 95, 86, 0.37);
+    --preloader-buble: #b60185;
     --gap: 20px;
     --elements: 4;
     --elementsMedia: 3;

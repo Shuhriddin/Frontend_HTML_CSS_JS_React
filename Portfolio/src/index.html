@@ -10,10 +10,18 @@
 </head>
 
 <body>
+    <div id="preloader">
+        <div class="loader">
+            <div class="right"></div>
+            <div class="right"></div>
+            <div class="right"></div>
+            <span class="snipper-title">Shuxriddin...</span>
+        </div>
+    </div>
     <div class="body-wrapper">
         <header class="header" id="header">
             <div class="container header__container">
-                <a class="header__link" href="#" id="main" aria-label="логотип разработчика">
+                <a class="header__link" href="#" aria-label="логотип разработчика">
                     <img class="header__logo" src="/img/Logo.png" alt="логотип разработчика">
                 </a>
                 <div class="header__menu">
@@ -61,33 +69,23 @@
                                     </svg>
                                 </button>
     
-                                <h2 class="modal__title">
-                                    Заполните форму
-                                </h2>
-                                <form id="form" class="modal__form" action="#">
-                                    <div class="modal__group">
-                                        <input id="contact-name" class="modal__name--input" placeholder="" required
-                                            onkeyup="validateName()">
-                                        <label class="modal__label">Имя</label>
-                                        <span id="name-error"></span>
+                                <h2 class="send-title">Запольните форму</h2>
+                                <form class="form" onsubmit="emailSend(); reset(); return false;">
+                                    <div class="form-box">
+                                        <input class="form-inp" type="text" id="name" placeholder="" name="name" onkeyup="validateName()" required>
+                                        <label class="form-label">Имя</label>
+                                        <span class="errorBlock" id="errorName"></span>
                                     </div>
-                                    <div class="modal__group">
-                                        <input id="contact-phone" class="modal__name--input" name="phone" placeholder=""
-                                            required onkeyup="validatePhone()">
-                                        <label for="phone" class="modal__label">Тел.номер</label>
-                                        <span id="phone-error"></span>
+                                    <div class="form-box">
+                                        <input class="form-inp" type="text" id="phone" placeholder="" name="phone" required>
+                                        <label class="form-label">Тел.номер</label>
+                                        <span class="errorBlock" id="errorPhone"></span>
                                     </div>
-                                    <div class="modal__textarea">
-                                        <input row="5" class="modal__input--textarea" type="text" name=""
-                                            id="contact-message" onkeyup="validateMessage()">
-                                        <label class="modal__label--textarea" for="textarea">Комментарий</label>
-                                        <span id="message-error"></span>
+                                    <div class="form-box">
+                                        <textarea class="form-msg" id="message" placeholder="" name="msg" required></textarea>
+                                        <label class="form-label-msg">Комментарий</label>
                                     </div>
-                                    <button class="modal__form--btn" onclick="return validateForm()">
-                                        Отправить
-                                    </button>
-                                    <span id="submit-error"></span>
-    
+                                    <button type="submit" id="btn" class="form-btn flash-btn">Отправить</button>
                                 </form>
                             </div>
                         </div>
@@ -119,7 +117,7 @@
                                 <ul class="social__link">
                                     <li class="social__item social__item--phone">
                                         <span class="tooltip">Телефон</span>
-                                        <a href="" class="hero__social--phone">
+                                        <a href="tel:+998991259009" class="hero__social--phone">
                                             <svg class="svg-phone-dims">
                                                 <use xlink:href="/img/sprite.svg#phone"></use>
                                             </svg>
@@ -127,7 +125,7 @@
                                     </li>
                                     <li class="social__item">
                                         <span class="tooltip">Телеграм</span>
-                                        <a href="" class="hero__social--phone">
+                                        <a href="https://t.me/shuhriddin_90" class="hero__social--phone">
                                             <svg class="svg-telegramm-dims">
                                                 <use xlink:href="/img/sprite.svg#telegram"></use>
                                             </svg>
@@ -135,7 +133,7 @@
                                     </li>
                                     <li class="social__item">
                                         <span class="tooltip">GitHub</span>
-                                        <a href="" class="hero__social--phone">
+                                        <a href="https://github.com/Shuhriddin/projects" class="hero__social--phone">
                                             <svg class="svg-github-dims">
                                                 <use xlink:href="/img/sprite.svg#github"></use>
                                             </svg>
@@ -164,9 +162,9 @@
                         В&nbsp;ходе обучения я&nbsp;освоил HTML, CSS (Bootstrap), SCSS, JavaScript, React, Python, Flask,
                         а&nbsp;также программы Ps, Figma, и&nbsp;методологии Agile, Scrum и&nbsp;Kanban в&nbsp;работе
                         с&nbsp;продуктом.
-                        Я&nbsp;решила стать разработчиком, чтобы создавать что-то уникальное и&nbsp;помогать людям
-                        в&nbsp;их&nbsp;работе. В&nbsp;моей жизни много перемен и&nbsp;я&nbsp;всегда готова к&nbsp;новому.
-                        Я&nbsp;увлечена технологиями frontend-разработки, люблю изучать новые языки программирования.
+                        Я&nbsp;решил стать разработчиком, чтобы создавать что-то уникальное и&nbsp;помогать людям
+                        в&nbsp;их&nbsp;работе. В&nbsp;моей жизни много перемен и&nbsp;я&nbsp;всегда готов к&nbsp;новому.
+                        Я&nbsp;увлекаюсь технологиями fullstack-разработки, люблю изучать новые языки программирования.
                     </p>
                 </div>
             </section>
@@ -242,195 +240,59 @@
                     <h3 class="projects__title about__title">
                         Проекты
                     </h3>
-                    <div class="projects__content">
-                        <ul class="projects__list">
-                            <li class="projects__item">
-                                <div class="projects__link">
-                                    <img src="/img/3D.jpg" alt="3D Моделирования">
-                                    <div class="projects__link--inner">
-                                        <h3 class="inner__title">Посмотреть</h3>
-                                        <p class="inner__text"><span>Тема: Курсы 3D
-                                                Моделирования</span><br>-кроссбравзерность + <br>-адаптивность +
-                                            <br>-пиксел-перфект +</p>
-                                        <button class="inner__btn">
-                                            <a href="#" class="inner">
-                                                <svg class="svg-arrow-dims">
-                                                    <use xlink:href="/img/sprite.svg#arrow"></use>
-                                                </svg>
-                                            </a>
-                                        </button>
+                </div>
+                    <ul class="portfolio__list">
+                        <li class="portfolio__list__item">
+                            <article class="portfolio-item">
+                                <a href="" class="portfolio-item__link">
+                                    <div class="portfolio-item__bg"></div>
+                                    <div class="container">
+                                        <span class="portfolio-item__theme">строительная компания</span>
+                                        <h3 class="portfolio-item__title">Evklid</h3>
                                     </div>
-                                    <div class="projects__item--arrow">
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
+                                </a>
+                            </article>
+                        </li>
+                        <li class="portfolio__list__item">
+                            <article class="portfolio-item">
+                                <a href="" class="portfolio-item__link">
+                                    <div class="portfolio-item__bg portfolio-item__bg--second"></div>
+                                    <div class="container">
+                                        <span class="portfolio-item__theme">Кухни от производителя</span>
+                                        <h3 class="portfolio-item__title">Anata kitchen</h3>
                                     </div>
-                                </div>
-                            </li>
-                            <li class="projects__item">
-                                <div class="projects__link">
-                                    <img src="/img/Evklid.jpg" alt="Evklid Строительная компания">
-                                    <div class="projects__link--inner">
-                                        <h3 class="inner__title">Посмотреть</h3>
-                                        <p class="inner__text"><span>Тема: Evklid Строительная
-                                                компания</span><br>-кроссбравзерность + <br>-адаптивность +
-                                            <br>-пиксел-перфект +<br>-использован JavaScript</p>
-                                        <button class="inner__btn">
-                                            <a href="#" class="inner">
-                                                <svg class="svg-arrow-dims">
-                                                    <use xlink:href="/img/sprite.svg#arrow"></use>
-                                                </svg>
-                                            </a>
-                                        </button>
+                                </a>
+                            </article>
+                        </li>
+                        <li class="portfolio__list__item">
+                            <article class="portfolio-item">
+                                <a href="" class="portfolio-item__link">
+                                    <div class="portfolio-item__bg portfolio-item__bg--three"></div>
+                                    <div class="container">
+                                        <span class="portfolio-item__theme">федеральная сеть POP-UP торговли</span>
+                                        <h3 class="portfolio-item__title">Promotion.ru</h3>
                                     </div>
-                                    <div class="projects__item--arrow">
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
+                                </a>
+                            </article>
+                        </li>
+                        <li class="portfolio__list__item">
+                            <article class="portfolio-item portfolio-item--burger">
+                                <a href="" class="portfolio-item__link">
+                                    <div class="portfolio-item__bg portfolio-item__bg--four"></div>
+                                    <div class="container">
+                                        <span class="portfolio-item__theme">интернет магазин</span>
+                                        <h3 class="portfolio-item__title">Fast Food</h3>
                                     </div>
-                                </div>
-                            </li>
-                            <li class="projects__item">
-                                <div class="projects__link">
-                                    <img src="/img/Pro.jpg" alt="Promotion.ru">
-                                    <div class="projects__link--inner">
-                                        <h3 class="inner__title">Посмотреть</h3>
-                                        <p class="inner__text"><span>Тема: Promotion.ru</span><br>-кроссбравзерность +
-                                            <br>-адаптивность + <br>-пиксел-перфект +<br>-сделано через Gulp</p>
-                                        <button class="inner__btn">
-                                            <a href="#" class="inner">
-                                                <svg class="svg-arrow-dims">
-                                                    <use xlink:href="/img/sprite.svg#arrow"></use>
-                                                </svg>
-                                            </a>
-                                        </button>
-                                    </div>
-                                    <div class="projects__item--arrow">
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="projects__item">
-                                <div class="projects__link">
-                                    <img src="/img/Blanchard.jpg" alt="Blanchard музей искусства">
-                                    <div class="projects__link--inner">
-                                        <h3 class="inner__title">Посмотреть</h3>
-                                        <p class="inner__text"><span>Тема: Blanchard музей
-                                                искусства</span><br>-кроссбравзерность + <br>-адаптивность +
-                                            <br>-пиксел-перфект+ <br>-JavaScript+</p>
-                                        <button class="inner__btn">
-                                            <a href="#" class="inner">
-                                                <svg class="svg-arrow-dims">
-                                                    <use xlink:href="/img/sprite.svg#arrow"></use>
-                                                </svg>
-                                            </a>
-                                        </button>
-                                    </div>
-                                    <div class="projects__item--arrow">
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="projects__item">
-                                <div class="projects__link">
-                                    <img src="/img/Lagoona.jpg" alt="Lagoona Hotel">
-                                    <div class="projects__link--inner">
-                                        <h3 class="inner__title">Посмотреть</h3>
-                                        <p class="inner__text"><span>Тема: Lagoona Hotel</span><br>-кроссбравзерность +
-                                            <br>-адаптивность + <br>-пиксел-перфект+</p>
-                                        <button class="inner__btn">
-                                            <a href="#" class="inner">
-                                                <svg class="svg-arrow-dims">
-                                                    <use xlink:href="/img/sprite.svg#arrow"></use>
-                                                </svg>
-                                            </a>
-                                        </button>
-                                    </div>
-                                    <div class="projects__item--arrow">
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="projects__item">
-                                <div class="projects__link">
-                                    <img src="/img/Anata.jpg" alt="Anata Kitchen">
-                                    <div class="projects__link--inner">
-                                        <h3 class="inner__title">Посмотреть</h3>
-                                        <p class="inner__text"><span>Тема: Anata Kitchen</span><br>-кроссбравзерность +
-                                            <br>-адаптивность + <br>-пиксел-перфект+<br>-сделано через Gulp</p>
-                                        <button class="inner__btn">
-                                            <a href="#" class="inner">
-                                                <svg class="svg-arrow-dims">
-                                                    <use xlink:href="/img/sprite.svg#arrow"></use>
-                                                </svg>
-                                            </a>
-                                        </button>
-                                    </div>
-                                    <div class="projects__item--arrow">
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="projects__item">
-                                <div class="projects__link">
-                                    <img src="/img/FastFood.jpg" alt="FastFood интернет-магазин">
-                                    <div class="projects__link--inner">
-                                        <h3 class="inner__title">Посмотреть</h3>
-                                        <p class="inner__text"><span>Тема: FastFood
-                                                интернет-магазин</span><br>-кроссбравзерность + <br>-адаптивность -
-                                            <br>-пиксел-перфект-<br>JavaScript+</p>
-                                        <button class="inner__btn">
-                                            <a href="#" class="inner">
-                                                <svg class="svg-arrow-dims">
-                                                    <use xlink:href="/img/sprite.svg#arrow"></use>
-                                                </svg>
-                                            </a>
-                                        </button>
-                                    </div>
-                                    <div class="projects__item--arrow">
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="projects__item">
-                                <div class="projects__link">
-                                    <img src="/img/HighPass.jpg" alt="High Pass">
-                                    <div class="projects__link--inner">
-                                        <h3 class="inner__title">Посмотреть</h3>
-                                        <p class="inner__text"><span>Тема: High Pass</span><br>-кроссбравзерность +
-                                            <br>-адаптивность - <br>-пиксел-перфект-<br>JavaScript+</p>
-                                        <button class="inner__btn">
-                                            <a href="#" class="inner">
-                                                <svg class="svg-arrow-dims">
-                                                    <use xlink:href="/img/sprite.svg#arrow"></use>
-                                                </svg>
-                                            </a>
-                                        </button>
-                                    </div>
-                                    <div class="projects__item--arrow">
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <button class="projects__btn">
-                        <a class="projects__btn--link" href="#">
+                                </a>
+                            </article>
+                        </li>
+                    </ul>
+                <div class="container projects__container">
+                    <a href="index.html" class="projects__button--link">
+                        <button class="projects__button flash-btn">
                             Подробнее
-                        </a>
-                    </button>
+                        </button>
+                    </a>
                 </div>
             </section>
         </main>
@@ -501,8 +363,10 @@
                 </div>
         </footer>
     </div>
-    <script src="vendor.js"></script>
-    <script src="app.js"></script>
+    <script type="module" src="vendor.js"></script>
+    <script type="module" src="app.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </body>
 
 </html>

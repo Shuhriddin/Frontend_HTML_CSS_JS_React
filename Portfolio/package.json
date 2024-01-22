@@ -25,7 +25,8 @@
     "gulp-fonter": "^0.3.0",
     "gulp-htmlmin": "^5.0.1",
     "gulp-if": "^3.0.0",
-    "gulp-imagemin": "^9.0.0",
+    "gulp-image": "^4.4.1",
+    "gulp-imagemin": "^5.0.3",
     "gulp-notify": "^4.0.0",
     "gulp-plumber": "^1.2.1",
     "gulp-replace": "^1.1.4",
@@ -36,7 +37,6 @@
     "gulp-uglify-es": "^3.0.0"
   },
   "dependencies": {
-    "gulp-image": "^6.2.1",
     "gulp-ttf2woff": "^1.1.1",
     "gulp-uglify": "^3.0.2"
   }

@@ -9,10 +9,19 @@
         grid-gap: 35px;
         list-style-type: none;
     }
-
     .skills__item {
         width: 350px;
     }
+}
+
+@media (max-width: 1785px) {
+    .projects__item--arrow span {
+        width: 15px;
+        height: 15px;
+    }
+    .projects__item:nth-child(-n+2) {
+        display: none;
+    }    
 }
 
 @media (max-width: 1625px) {
@@ -20,7 +29,6 @@
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
 }
-
 
 @media (max-width: 1545px) {
     .skills__item {
@@ -145,19 +153,23 @@
 
 @media (max-width: 992px) {
     .inner__title {
-        font-size: 16px;
-    }
+        font-size: 16px !important;
+    }    
     .inner__text {
-        font-size: 12px;
-        margin-bottom: 16px;
+        font-size: 12px !important;
+        margin-bottom: 16px !important;
+        line-height: 20px !important;
     }
     .inner__text span {
-        font-size: 12px;
+        font-size: 12px !important;
+    }
+    .projects__item--arrow span {
+        width: 15px !important;
+        height: 15px !important;
     }
     .footer__nav {
-        display: none;
+        display: none !important;
     }
-
 }
 
 @media (max-width: 733px) {

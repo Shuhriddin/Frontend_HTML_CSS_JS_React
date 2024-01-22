@@ -52,7 +52,7 @@
     border-radius: 50%;
     overflow: hidden;
     margin-bottom: 100px;
-    background: var(--logo-color);
+    background: var(--aztec-color);
 }
 .about__pic--man {
     width: 100%;

@@ -26,9 +26,9 @@
 .skills__list {
     position: relative;
     width: 100%;
-    display: grid;
-    /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
+    display: flex;
     align-items: center;
+    flex-wrap: wrap;
     justify-content: center;
     grid-gap: 35px;
     list-style-type: none;

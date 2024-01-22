@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Отправка заявки на почту</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <form id="form" class="form" autocomplete="off">
+            <div class="form__input-box">
+                <input class="form__input-inp" type="text" id="name" name="name" placeholder="Имя" autocomplete="off">
+            </div>            
+            <div class="form__input-box">
+                <input class="form__input-inp" type="tel" id="tel" name="tel" placeholder="+998()__-___-__-__" autocomplete="off">
+            </div>            
+            <div class="form__input-box">
+                <textarea class="form__input-inp" name="msg" id="msg" placeholder="Сообщение"></textarea>
+            </div>
+            <button type="submit" class="form__btn">Отправка</button>           
+        </form>
+    </div>
+
+    <script src="js/inputmask.min.js"></script>    
+    <script src="js/just-validate.min.js"></script>
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>

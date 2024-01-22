@@ -1,20 +1,20 @@
 // хедер скролл
 const headerEl = document.getElementById('header');
-window.addEventListener("scroll", function(){
+window.addEventListener("scroll", function () {
     const scrollPos = window.scrollY
-    
+
     if (scrollPos > 100) {
         headerEl.classList.add('header_mini')
-    }else{
+    } else {
         headerEl.classList.remove('header_mini')
     }
 })
 
 // модальное окно
-document.getElementById('open-modal-btn').addEventListener("click", function(){
+document.getElementById('open-modal-btn').addEventListener("click", function () {
     document.getElementById('my-modal').classList.add('open')
 })
-document.getElementById('close-my-modal-btn').addEventListener("click", function(){
+document.getElementById('close-my-modal-btn').addEventListener("click", function () {
     document.getElementById('my-modal').classList.remove('open')
 })
 
@@ -35,8 +35,8 @@ document.getElementById("my-modal").addEventListener("click", event => {
 });
 
 // Бургер меню====
-document.addEventListener("DOMContentLoaded", function() {
-    document.getElementById("burger").addEventListener("click", function() {
+document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("burger").addEventListener("click", function () {
         document.querySelector(".header").classList.toggle("open")
     })
 })
@@ -81,3 +81,54 @@ ratings.forEach((rating) => {
 });
 
 
+// loader
+
+var loader = document.getElementById("preloader");
+window.addEventListener("load", function () {
+    loader.style.display = "none"
+})
+
+// modal send
+var btn = document.getElementById("btn");
+btn.addEventListener("click", function (e) {
+    e.preventDefault()
+    var name = document.getElementById("name").value;
+    var phone = document.getElementById("phone").value;
+    var msg = document.getElementById("message").value;
+    var body = 'name: ' + name + '<br/> phone: ' + phone + '<br/> message: ' + msg;
+
+    var errorName = document.getElementById("errorName");
+    var errorPhone = document.getElementById("errorPhone");
+
+    if (name.trim() === '') {
+        errorName.innerHTML = 'Введите имя';
+        return; // Prevent further execution if validation fails
+    } else if (name.length < 2) {
+        errorName.innerHTML = 'Имя должно содержать как минимум 2 символа';
+        return; // Prevent further execution if validation fails
+    }
+    if (phone.trim() === '') {
+        errorPhone.innerHTML = 'Введите телефон номер';
+        return; // Prevent further execution if validation fails
+    } else if (name.length < 12) {
+        errorPhone.innerHTML = 'Номер телефона должен содержится 12 символа';
+        return; // Prevent further execution if validation fails
+    }
+
+    Email.send({
+        SecureToken: "18823e6e-3016-4aa2-9424-b77cf0bf4931",
+        To: 'shuxriddinsolixov2023@gmail.com',
+        From: "shuxriddinsolixov2023@gmail.com",
+        Subject: "contact message",
+        Body: body
+    }).then(
+        message => {
+            if (message == 'OK') {
+                swal("Спасибо!", "Сообщение отправлено!", "success");
+            } else {
+                swal("Ошибка", "Сообщение не отправлено!", "error");
+            }
+        }
+    );
+
+})

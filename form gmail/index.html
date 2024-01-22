@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Working contact Form to Email using HTML, CSS and JS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <section class="contact">
+        <h2 class="contact__title">Контакты</h2>
+        <form action="#" class="form">
+            <div class="input-box">
+                <div class="input-field filed">
+                    <input type="text" placeholder="Имя" id="name" class="item" autocomplete="off">
+                    <div class="error-txt">Введите польное имя</div>
+                </div>
+                <div class="input-field filed">
+                    <input type="text" placeholder="Почтовой адрес" id="email" class="item" autocomplete="off">
+                    <div class="error-txt">Введите электронной почта</div>
+                </div>
+            </div>
+
+            <div class="input-box">
+                <div class="input-field filed">
+                    <input type="text" placeholder="Тел номер" id="phone" class="item" autocomplete="off">
+                    <div class="error-txt">Введите телефон номер</div>
+                </div>
+                <div class="input-field filed">
+                    <input type="text" placeholder="Тема" id="subject" class="item" autocomplete="off">
+                    <div class="error-txt">Введите тему</div>
+                </div>
+            </div>
+
+            <div class="textarea-field field">
+                <textarea name="" id="message" cols="30" rows="10" placeholder="Комментарий" class="item" autocomplete="off"></textarea>
+                <div class="error-txt">Напишите комментарий</div>
+            </div>
+
+            <button class="form__btn" type="button">Отправить</button>
+        </form>
+    </section>
+
+    <!-- <script src="https://smtpjs.com/v3/smtp.js"></script> -->
+    <script src="script.js"></script>
+</body>
+</html>

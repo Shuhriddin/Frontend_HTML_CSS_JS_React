@@ -59,7 +59,7 @@
 }
 
 @media (max-width: 1100px) {
-    .header__btn--container {
+    .header-btn {
         margin-right: 45px;
     }
     .nav {
@@ -77,7 +77,7 @@
         will-change: transform;
     }
 
-    .burger__menu {
+    .burger {
         display: block;
     }
 
@@ -130,12 +130,15 @@
     }
 
     /* about */
-    .about__title {
+    .about__title,
+    .skills__title,
+    .projects__title,
+    .footer__title {
         width: 50%;
         font-size: 48px;
     }
 
-    .about__title--child {
+    .about__span {
         font-size: 48px;
     }
 

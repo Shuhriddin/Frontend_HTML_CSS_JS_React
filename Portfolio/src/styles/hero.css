@@ -6,7 +6,6 @@
     background-position: center center;
     background-size: cover;
 }
-
 .hero__content {
     color: var(--second-color);
     font-family: "Gordita";
@@ -18,12 +17,10 @@
     padding: 0;
     margin-bottom: 40px;
 }
-
 .hero__textAnimation {
     position: relative;
     max-width: 47.5rem;
 }
-
 .hero__title {
     font-size: 64px;
     font-family: "Cruin";
@@ -40,7 +37,6 @@
     animation: homeBgtext 6s linear infinite;
     animation-delay: 2s;
 }
-
 .hero__title::before {
     content: '';
     position: absolute;
@@ -53,7 +49,6 @@
     animation: homeCursorText 6s linear infinite;
     animation-delay: 2s;
 }
-
 @keyframes homeCursorText {
     0%, 10%, 100% {
         width: 0;
@@ -66,7 +61,6 @@
         opacity: 0;
     }
 }
-
 @keyframes homeBgtext {
     0%,10%,100% {
         background-position: -50rem 0;
@@ -75,7 +69,6 @@
         background-position: 0 0;
     }
 }
-
 .hero__little {
     display: block;
     color: var(--second-color);
@@ -88,7 +81,6 @@
     animation: heroLitlle 6s linear infinite;
     animation-delay: 2s;
 }
-
 @keyframes heroLitlle {
     0%, 50%{
         opacity: 0;
@@ -100,7 +92,6 @@
         opacity: 1;
     }
 }
-
 .hero__text {
     display: block;
     color: var(--hero-text);
@@ -111,7 +102,6 @@
     padding: 0;
     margin-bottom: 50px;
 }
-
 .hero__btn {
     position: relative;
     background: transparent;
@@ -132,7 +122,6 @@
     border-radius: 10px;
     transition: box-shadow .5s ease-in-out, transform .5s ease-in-out;
 }
-
 .hero__btn::before {
     content: "";
     display: block;
@@ -145,7 +134,6 @@
     transform: translate(-50%, -50%);
     padding: 22px;
 }
-
 .svg-download-dims {
     position: absolute;
     top: 23%;
@@ -154,29 +142,24 @@
     height: 50%;
     transition: transform .5s ease-in-out;
 }
-
 .svg-download-dims use {
     stroke: var(--black-color);
 }
-
 .hero__btn:hover {
     box-shadow: 0 0 5px var(--help-color),
                 0 0 25px var(--help-color),
                 0 0 50px var(--help-color);
     transition: box-shadow .5s ease-in-out;
 }
-
 .hero__btn:hover .svg-download-dims {
     transform: scale(1.3);
     transition: transform .5s ease-in-out;
 }
-
 /* social media */
 .social__link {
     display: flex;
     list-style-type: none;
 }
-
 .social__item {
     width: 55px;
     height: 55px;
@@ -189,7 +172,6 @@
     cursor: pointer;
     transition: all .3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
-
 .social__item::before {
     content: "";
     display: block;
@@ -202,7 +184,6 @@
     transform: translate(-50%, -50%);
     padding: 20px;
 }
-
 .tooltip {
     width: 100px;
     position: absolute;
@@ -220,7 +201,6 @@
     pointer-events: none;
     transition: all .3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
-
 .tooltip::before {
     position: absolute;
     content: '';
@@ -232,7 +212,6 @@
     transform: translate(-50%) rotate(45deg);
     transition: all .3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
-
 .social__item:hover .tooltip {
     top: -45px;
     opacity: 1;
@@ -241,18 +220,15 @@
     text-align: center;
     transition: all .3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
-
 .social__item:not(:last-child) {
     margin-right: 20px;
 }
-
 .svg-phone-dims,
 .svg-telegramm-dims,
 .svg-github-dims {
     width: 25px;
     height: 25px;
 }
-
 .svg-phone-dims use,
 .svg-telegramm-dims use,
 .svg-github-dims use {

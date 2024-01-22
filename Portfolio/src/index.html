@@ -54,18 +54,18 @@
                             </li>
                         </ul>
                     </nav>
-                    <div class="header__btn--container">
-                        <button class="header__btn" id="open-modal-btn">
-                            <span class="header__btn--tooltip">Сообщение</span>
+                    <div class="header__btn">
+                        <button class="header-btn" id="open-modal-btn">
+                            <span class="header-btn-tooltip">Сообщение</span>
                             <svg class="svg-send-message-dims">
                                 <use class="header__sendBox" xlink:href="/img/sprite.svg#send-message"></use>
                             </svg>
                         </button>
                         <div class="modal" id="my-modal">
                             <div class="modal__box">
-                                <button class="modal__close--btn" id="close-my-modal-btn">
+                                <button class="modal-close-btn" id="close-my-modal-btn">
                                     <svg class="svg-close-dims">
-                                        <use class="modal__close--svg" xlink:href="/img/sprite.svg#close"></use>
+                                        <use class="modal-close-svg" xlink:href="/img/sprite.svg#close"></use>
                                     </svg>
                                 </button>
     
@@ -90,10 +90,10 @@
                             </div>
                         </div>
                     </div>
-                    <button class="burger__menu" id="burger">
-                        <span class="burger__menu--item"></span>
-                        <span class="burger__menu--item"></span>
-                        <span class="burger__menu--item"></span>
+                    <button class="burger" id="burger">
+                        <span class="burger__item"></span>
+                        <span class="burger__item"></span>
+                        <span class="burger__item"></span>
                     </button>
                 </div>
             </div>
@@ -117,7 +117,7 @@
                                 <ul class="social__link">
                                     <li class="social__item social__item--phone">
                                         <span class="tooltip">Телефон</span>
-                                        <a href="tel:+998991259009" class="hero__social--phone">
+                                        <a href="tel:+998991259009" class="social-item">
                                             <svg class="svg-phone-dims">
                                                 <use xlink:href="/img/sprite.svg#phone"></use>
                                             </svg>
@@ -125,7 +125,7 @@
                                     </li>
                                     <li class="social__item">
                                         <span class="tooltip">Телеграм</span>
-                                        <a href="https://t.me/shuhriddin_90" class="hero__social--phone">
+                                        <a href="https://t.me/shuhriddin_90" class="social-item">
                                             <svg class="svg-telegramm-dims">
                                                 <use xlink:href="/img/sprite.svg#telegram"></use>
                                             </svg>
@@ -133,7 +133,7 @@
                                     </li>
                                     <li class="social__item">
                                         <span class="tooltip">GitHub</span>
-                                        <a href="https://github.com/Shuhriddin/projects" class="hero__social--phone">
+                                        <a href="https://github.com/Shuhriddin/projects" class="social-item">
                                             <svg class="svg-github-dims">
                                                 <use xlink:href="/img/sprite.svg#github"></use>
                                             </svg>
@@ -148,10 +148,10 @@
             <section class="about" id="about">
                 <div class="container about__container">
                     <h3 class="about__title">
-                        Обо<span class="about__title--child"> мне</span>
+                        Обо<span class="about__span"> мне</span>
                     </h3>
                     <div class="about__picture">
-                        <img class="about__pic--man" src="/img/re.png" alt="картинка челвека">
+                        <img class="about-picture-man" src="/img/re.png" alt="картинка челвека">
                         <span class="circle-spin"></span>
                     </div>
                     <p class="about__text">
@@ -170,7 +170,7 @@
             </section>
             <section class="skills" id="skills">
                 <div class="container skills__container">
-                    <h3 class="about__title skills__title">
+                    <h3 class="skills__title my-title">
                         Навыки
                     </h3>
                     <div class="skills__content">
@@ -237,12 +237,12 @@
             </section>
             <section class="projects" id="projects">
                 <div class="container projects__container">
-                    <h3 class="projects__title about__title">
+                    <h3 class="projects__title my-title">
                         Проекты
                     </h3>
                 </div>
-                    <ul class="portfolio__list">
-                        <li class="portfolio__list__item">
+                    <ul class="projects__list">
+                        <li class="projects__item">
                             <article class="portfolio-item">
                                 <a href="" class="portfolio-item__link">
                                     <div class="portfolio-item__bg"></div>
@@ -253,7 +253,7 @@
                                 </a>
                             </article>
                         </li>
-                        <li class="portfolio__list__item">
+                        <li class="projects__item">
                             <article class="portfolio-item">
                                 <a href="" class="portfolio-item__link">
                                     <div class="portfolio-item__bg portfolio-item__bg--second"></div>
@@ -264,7 +264,7 @@
                                 </a>
                             </article>
                         </li>
-                        <li class="portfolio__list__item">
+                        <li class="projects__item">
                             <article class="portfolio-item">
                                 <a href="" class="portfolio-item__link">
                                     <div class="portfolio-item__bg portfolio-item__bg--three"></div>
@@ -275,7 +275,7 @@
                                 </a>
                             </article>
                         </li>
-                        <li class="portfolio__list__item">
+                        <li class="projects__item">
                             <article class="portfolio-item portfolio-item--burger">
                                 <a href="" class="portfolio-item__link">
                                     <div class="portfolio-item__bg portfolio-item__bg--four"></div>
@@ -288,24 +288,22 @@
                         </li>
                     </ul>
                 <div class="container projects__container">
-                    <a href="index.html" class="projects__button--link">
-                        <button class="projects__button flash-btn">
+                        <a href="index.html" class="projects__button flash-btn projects__button--link">
                             Подробнее
-                        </button>
-                    </a>
+                        </a>
                 </div>
             </section>
         </main>
         <footer class="footer" id="contacts">
             <div class="container footer__container">
-                <h3 class="about__title footer__title">
+                <h3 class="footer__title my-title">
                     Контакты
                 </h3>
             </div>
                 <div class="footer__content">
-                    <div class="container footer__container--down">
-                        <a class="header__link" href="#" id="main" aria-label="логотип разработчика">
-                            <img class="header__logo" src="/img/Logo.png" alt="логотип разработчика">
+                    <div class="container footer-container-down">
+                        <a class="footer__link" href="#" id="main" aria-label="логотип разработчика">
+                            <img class="footer__logo" src="/img/Logo.png" alt="логотип разработчика">
                         </a>
                         <nav class="footer__nav">
                             <ul class="footer__list">
@@ -331,11 +329,11 @@
                                 </li>
                             </ul>
                         </nav>
-                        <div class="hero__social social">
+                        <div class="footer__social social">
                             <ul class="social__link">
                                 <li class="social__item social__item--phone">
                                     <span class="tooltip">Телефон</span>
-                                    <a href="" class="hero__social--phone">
+                                    <a href="" class="footer-social">
                                         <svg class="svg-phone-dims">
                                             <use xlink:href="/img/sprite.svg#phone"></use>
                                         </svg>
@@ -343,7 +341,7 @@
                                 </li>
                                 <li class="social__item">
                                     <span class="tooltip">Телеграм</span>
-                                    <a href="" class="hero__social--phone">
+                                    <a href="" class="footer-social">
                                         <svg class="svg-telegramm-dims">
                                             <use xlink:href="/img/sprite.svg#telegram"></use>
                                         </svg>
@@ -351,7 +349,7 @@
                                 </li>
                                 <li class="social__item">
                                     <span class="tooltip">GitHub</span>
-                                    <a href="" class="hero__social--phone">
+                                    <a href="" class="footer-social">
                                         <svg class="svg-github-dims">
                                             <use xlink:href="/img/sprite.svg#github"></use>
                                         </svg>

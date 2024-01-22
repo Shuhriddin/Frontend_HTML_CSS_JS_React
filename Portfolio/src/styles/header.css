@@ -11,7 +11,6 @@
     padding-bottom: 30px;
     transition: box-shadow .3s ease-in-out, padding-top .3s ease-in-out, padding-bottom .3s ease-in-out;
 }
-
 /*когда прокрутка скрола появиться етого класса */
 .header_mini {
     box-shadow: 0px 0px 24px 7px var(--header-boxShadow);
@@ -77,13 +76,11 @@
     text-decoration: none;
     transition: .5s ease-in-out;
 }
-
 .nav__item:hover {
     color: var(--help-color);
 }
-
 /* header__btn */
-.header__btn {
+.header-btn {
     text-align: center;
     position: relative;
     background: transparent;
@@ -94,7 +91,7 @@
     padding-top: 10px;
     cursor: pointer;
 }
-.header__btn::before {
+.header-btn::before {
     content: "";
     display: block;
     width: 100%;
@@ -106,10 +103,10 @@
     transform: translate(-50%, -50%);
     padding: 22px;
 }
-.header__btn:hover .header__btn--tooltip {
+.header-btn:hover .header-btn-tooltip {
     background: transparent;
 }
-.header__btn--tooltip {
+.header-btn-tooltip {
     width: 100px;
     position: absolute;
     top: 0;
@@ -123,7 +120,7 @@
     pointer-events: none;
     transition: all .3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
-.header__btn:hover .header__btn--tooltip {
+.header-btn:hover .header-btn-tooltip {
     top: -17px;
     left: -34px;
     opacity: 1;
@@ -140,11 +137,10 @@
 .header__sendBox {
     fill: var(--white-color);
 }
-.header__btn:hover .header__sendBox {
+.header-btn:hover .header__sendBox {
     fill: var(--help-color);
     transition: fill .5s ease-in-out;
 }
-
 /* modal__menu */
 .modal {
     position: fixed;
@@ -164,7 +160,7 @@
 }
 .modal__box {
     position: relative;
-    max-width: 550px;
+    max-width: 800px;
     padding: 45px;
     z-index: 1;
     margin: 30px 15px;
@@ -183,7 +179,7 @@
     transform: scale(1);
     transition: transform .5s ease-in-out;
 }
-.modal__close--btn {
+.modal-close-btn {
     border: none;
     outline: none;
     background: transparent;
@@ -193,20 +189,19 @@
     right: 8px;
     cursor: pointer;
 }
-.svg-close-dims, .modal__close--svg {
+.svg-close-dims, .modal-close-svg {
     width: 25px;
     height: 25px;
     transition: fill .3s ease-in-out;
 }
-.modal__close--btn:hover .svg-close-dims, .modal__close--svg path {
+.modal-close-btn:hover .svg-close-dims, .modal-close-svg path {
     fill: var(--remove-color);
     transition: fill .3s ease-in-out;
 }
-.modal__close--btn:active .svg-close-dims, .modal__close--svg path {
+.modal-close-btn:active .svg-close-dims, .modal-close-svg path {
     border: 1px solid var(--remove-color);
     transition: fill .3s ease-in-out;
 }
-
 /* modal__form */
 .send-title {
     margin: 0;
@@ -226,12 +221,10 @@
     z-index: 9999;
     background: var(--sec-bg-color);
 }
-
 .form-box {
     position: relative;
     margin-bottom: 40px;
 }
-
 .form-inp, .form-msg {
     width: 100%;
     font-size: 18px;
@@ -243,9 +236,9 @@
     border-bottom: 1px solid var(--black-color);
 }
 .form-msg {
+    resize: none;
     height: 100px;
 }
-
 .form-label, .form-label-msg {
     position: absolute;
     top: -3px;
@@ -258,21 +251,18 @@
     opacity: .5;
     transition: top .3s ease-in-out, transform .3s ease-in-out;
 }
-
 .form-box .form-inp:focus ~ .form-label, 
 .form-box .form-inp:valid ~ .form-label {
     top: -22px;
     left: 0;
     opacity: 1;
 }
-
 .form-box .form-msg:focus ~ .form-label-msg, 
 .form-box .form-msg:valid ~ .form-label-msg {
     top: -22px;
     left: 0;
     opacity: 1;
 }
-
 .form-btn {
     background: var(--aztec-color);
     color: var(--help-color);
@@ -298,18 +288,15 @@
 .form-btn:active {
     transform: scale(.97);
 }
-
 .errorBlock {
     color: red;
 }
-
-
 .mains {
     width: 10%;
     height: 20%;
 }
 /* burger menu */
-.burger__menu {
+.burger {
     display: none;
     position: relative;
     width: 40px;
@@ -321,7 +308,7 @@
     z-index: 2;
     transition: transform .5s ease-in-out, background-color .5s ease-in-out;
 }
-.burger__menu::before {
+.burger::before {
     content: "";
     display: block;
     width: 100%;
@@ -333,7 +320,7 @@
     transform: translate(-50%, -50%);
     padding: 20px;
 }
-.burger__menu--item {
+.burger__item {
     position: absolute;
     left: 5px;
     width: 30px;
@@ -342,28 +329,28 @@
     transition: transform .5s ease-in-out, opacity .5s ease-in-out, background-color .5s ease-in-out;
     will-change: transform;
 }
-.burger__menu:hover .burger__menu--item {
+.burger:hover .burger__item {
     background-color: var(--help-color);
     transition: background-color .5s ease-in-out;
 } 
-.burger__menu--item:nth-child(1) {
+.burger__item:nth-child(1) {
     transform: translateY(-10px);
 }
-.burger__menu--item:nth-child(3) {
+.burger__item:nth-child(3) {
     transform: translateY(10px);
 }
 /* krestik */
-.header.open .burger__menu--item:nth-child(1) {
+.header.open .burger__item:nth-child(1) {
     transform: translateY(0) rotate(45deg);
     background-color: var(--aztec-color);
     transition: transform .5s ease-in-out, background-color .5s ease-in-out;
 }
-.header.open .burger__menu--item:nth-child(2) {
+.header.open .burger__item:nth-child(2) {
     opacity: 0;
     background-color: var(--aztec-color);
     transition: opacity .5s ease-in-out, background-color .5s ease-in-out;
 }
-.header.open .burger__menu--item:nth-child(3) {
+.header.open .burger__item:nth-child(3) {
     transform: translateY(0) rotate(-45deg);
     background-color: var(--aztec-color);
     transition: transform .5s ease-in-out, background-color .5s ease-in-out;

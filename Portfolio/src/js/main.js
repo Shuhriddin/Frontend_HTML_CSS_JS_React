@@ -97,22 +97,29 @@ btn.addEventListener("click", function (e) {
     var msg = document.getElementById("message").value;
     var body = 'name: ' + name + '<br/> phone: ' + phone + '<br/> message: ' + msg;
 
-    var errorName = document.getElementById("errorName");
-    var errorPhone = document.getElementById("errorPhone");
+    var nameError = document.getElementById("errorName");
+    var phoneError = document.getElementById("errorPhone");
 
-    if (name.trim() === '') {
-        errorName.innerHTML = 'Введите имя';
-        return; // Prevent further execution if validation fails
+    if (name.length == 0) {
+        nameError.innerHTML = 'Введите имя';
+        setTimeout(function () {
+            nameError.style.display = 'none';
+        }, 3000)
+        return false;
     } else if (name.length < 2) {
-        errorName.innerHTML = 'Имя должно содержать как минимум 2 символа';
-        return; // Prevent further execution if validation fails
+        nameError.innerHTML = 'Имя должно содержать как минимум 2 символа';
+        setTimeout(function () {
+            nameError.style.display = 'none';
+        }, 3000)
+        return false;
     }
-    if (phone.trim() === '') {
-        errorPhone.innerHTML = 'Введите телефон номер';
-        return; // Prevent further execution if validation fails
-    } else if (name.length < 12) {
-        errorPhone.innerHTML = 'Номер телефона должен содержится 12 символа';
-        return; // Prevent further execution if validation fails
+
+    if (phone.length == '') {
+        phoneError.innerHTML = 'Введите телефон номер';
+        setTimeout(function () {
+            phoneError.style.display = 'none';
+        }, 3000)
+        return false;
     }
 
     Email.send({

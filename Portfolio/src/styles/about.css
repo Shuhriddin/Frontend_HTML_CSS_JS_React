@@ -20,7 +20,7 @@
     font-weight: 500;
     margin-bottom: 75px;
 }
-.about__title--child {
+.about__span {
     color: var(--logo-color);
     font-size: 54px;
     font-style: normal;
@@ -54,7 +54,7 @@
     margin-bottom: 100px;
     background: var(--aztec-color);
 }
-.about__pic--man {
+.about-picture-man {
     width: 100%;
     border-radius: 50%;
     border: 1px solid var(--aztec-color);

@@ -9,12 +9,10 @@
     justify-content: center;
     flex-direction: column;
 }
-
-.projects__title {
-    margin-bottom: 100px;
+.projects__title::before {
+    background: var(--aztec-color);    
 }
-
-.portfolio__list {
+.projects__list {
     width: 100%;
     margin-bottom: 65px;
 }
@@ -93,7 +91,6 @@
     color: var(--aztec-color);
     transition: color .3s ease-in-out .2s;
 }
-
 .projects__button {
     background: var(--aztec-color);
     color: var(--help-color);
@@ -139,7 +136,6 @@
     pointer-events: none;
     transition: transform .7s ease-in-out, opacity .3s ease-in-out;
 }
-
 .flash-btn:hover::after {
     transform: scale(5);
     opacity: .14;
@@ -149,7 +145,6 @@
     box-shadow: 0px 0px 0px 20px rgba(9, 88, 50, 0);
 }
 .projects__button--link {
-    width: 100%;
     height: 100%;
     text-align: center;
 }

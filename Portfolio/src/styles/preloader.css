@@ -17,7 +17,6 @@
     position: relative;
     background: var(--aztec-color);
 }
-
 .right {
     position: absolute;
     width: 250px;
@@ -25,7 +24,6 @@
     border: 0px solid var(--aztec-color);
     border-radius: 50%;  
 }
-
 .right:nth-child(1) {
     border-bottom-width: 8px;
     border-color: var(--preloader-buble);
@@ -49,7 +47,6 @@
         transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
     }    
 }
-
 @keyframes rotate2 {
     0% {
         transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
@@ -66,7 +63,6 @@
         transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
     }    
 }
-
 .snipper-title {
     color: var(--white-color);
     font-size: 18px;

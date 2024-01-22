@@ -68,21 +68,23 @@
                                         <use class="modal-close-svg" xlink:href="/img/sprite.svg#close"></use>
                                     </svg>
                                 </button>
-    
                                 <h2 class="send-title">Запольните форму</h2>
                                 <form class="form" onsubmit="emailSend(); reset(); return false;">
                                     <div class="form-box">
-                                        <input class="form-inp" type="text" id="name" placeholder="" name="name" onkeyup="validateName()" required>
+                                        <input class="form-inp" type="text" id="name" placeholder="" name="name"
+                                            onkeyup="validateName()" required>
                                         <label class="form-label">Имя</label>
                                         <span class="errorBlock" id="errorName"></span>
                                     </div>
                                     <div class="form-box">
-                                        <input class="form-inp" type="text" id="phone" placeholder="" name="phone" required>
+                                        <input class="form-inp" type="text" id="phone" placeholder="" name="phone"
+                                            required>
                                         <label class="form-label">Тел.номер</label>
                                         <span class="errorBlock" id="errorPhone"></span>
                                     </div>
                                     <div class="form-box">
-                                        <textarea class="form-msg" id="message" placeholder="" name="msg" required></textarea>
+                                        <textarea class="form-msg" id="message" placeholder="" name="msg"
+                                            required></textarea>
                                         <label class="form-label-msg">Комментарий</label>
                                     </div>
                                     <button type="submit" id="btn" class="form-btn flash-btn">Отправить</button>
@@ -113,33 +115,31 @@
                             <button class="hero__btn">Скачать CV <span><svg class="svg-download-dims">
                                         <use xlink:href="/img/sprite.svg#downloadd"></use>
                                     </svg></span></button>
-                            <div class="hero__social social">
-                                <ul class="social__link">
-                                    <li class="social__item social__item--phone">
+                            <div class="social">
+                                <a href="tel:+998991259009" class="social-item" target="_blank">
+                                    <div class="social__item social__item--phone">
                                         <span class="tooltip">Телефон</span>
-                                        <a href="tel:+998991259009" class="social-item">
-                                            <svg class="svg-phone-dims">
-                                                <use xlink:href="/img/sprite.svg#phone"></use>
-                                            </svg>
-                                        </a>
-                                    </li>
-                                    <li class="social__item">
+                                        <svg class="svg-phone-dims">
+                                            <use xlink:href="/img/sprite.svg#phone"></use>
+                                        </svg>
+                                    </div>
+                                </a>
+                                <a href="https://t.me/shuhriddin_90" class="social-item" target="_blank">
+                                    <div class="social__item">
                                         <span class="tooltip">Телеграм</span>
-                                        <a href="https://t.me/shuhriddin_90" class="social-item">
-                                            <svg class="svg-telegramm-dims">
-                                                <use xlink:href="/img/sprite.svg#telegram"></use>
-                                            </svg>
-                                        </a>
-                                    </li>
-                                    <li class="social__item">
+                                        <svg class="svg-telegramm-dims">
+                                            <use xlink:href="/img/sprite.svg#telegram"></use>
+                                        </svg>
+                                    </div>
+                                </a>
+                                <a href="https://github.com/Shuhriddin/projects" class="social-item" target="_blank">
+                                    <div class="social__item">
                                         <span class="tooltip">GitHub</span>
-                                        <a href="https://github.com/Shuhriddin/projects" class="social-item">
-                                            <svg class="svg-github-dims">
-                                                <use xlink:href="/img/sprite.svg#github"></use>
-                                            </svg>
-                                        </a>
-                                    </li>
-                                </ul>
+                                        <svg class="svg-github-dims">
+                                            <use xlink:href="/img/sprite.svg#github"></use>
+                                        </svg>
+                                    </div>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -155,11 +155,13 @@
                         <span class="circle-spin"></span>
                     </div>
                     <p class="about__text">
-                        Меня зовут Шухриддин, я&nbsp;родился в&nbsp;1990 году в&nbsp;Ташкентской области. В&nbsp;настоящее
+                        Меня зовут Шухриддин, я&nbsp;родился в&nbsp;1990 году в&nbsp;Ташкентской области.
+                        В&nbsp;настоящее
                         время проживаю в&nbsp;Ташкенте. Я&nbsp;работаю в&nbsp;области программирования уже более
                         полутора года. Я&nbsp;закончил курсы Skillbox по&nbsp;профессии <span>Fullstack-разработчик
-                        на&nbsp;Python</span>.
-                        В&nbsp;ходе обучения я&nbsp;освоил HTML, CSS (Bootstrap), SCSS, JavaScript, React, Python, Flask,
+                            на&nbsp;Python</span>.
+                        В&nbsp;ходе обучения я&nbsp;освоил HTML, CSS (Bootstrap), SCSS, JavaScript, React, Python,
+                        Flask,
                         а&nbsp;также программы Ps, Figma, и&nbsp;методологии Agile, Scrum и&nbsp;Kanban в&nbsp;работе
                         с&nbsp;продуктом.
                         Я&nbsp;решил стать разработчиком, чтобы создавать что-то уникальное и&nbsp;помогать людям
@@ -241,56 +243,56 @@
                         Проекты
                     </h3>
                 </div>
-                    <ul class="projects__list">
-                        <li class="projects__item">
-                            <article class="portfolio-item">
-                                <a href="" class="portfolio-item__link">
-                                    <div class="portfolio-item__bg"></div>
-                                    <div class="container">
-                                        <span class="portfolio-item__theme">строительная компания</span>
-                                        <h3 class="portfolio-item__title">Evklid</h3>
-                                    </div>
-                                </a>
-                            </article>
-                        </li>
-                        <li class="projects__item">
-                            <article class="portfolio-item">
-                                <a href="" class="portfolio-item__link">
-                                    <div class="portfolio-item__bg portfolio-item__bg--second"></div>
-                                    <div class="container">
-                                        <span class="portfolio-item__theme">Кухни от производителя</span>
-                                        <h3 class="portfolio-item__title">Anata kitchen</h3>
-                                    </div>
-                                </a>
-                            </article>
-                        </li>
-                        <li class="projects__item">
-                            <article class="portfolio-item">
-                                <a href="" class="portfolio-item__link">
-                                    <div class="portfolio-item__bg portfolio-item__bg--three"></div>
-                                    <div class="container">
-                                        <span class="portfolio-item__theme">федеральная сеть POP-UP торговли</span>
-                                        <h3 class="portfolio-item__title">Promotion.ru</h3>
-                                    </div>
-                                </a>
-                            </article>
-                        </li>
-                        <li class="projects__item">
-                            <article class="portfolio-item portfolio-item--burger">
-                                <a href="" class="portfolio-item__link">
-                                    <div class="portfolio-item__bg portfolio-item__bg--four"></div>
-                                    <div class="container">
-                                        <span class="portfolio-item__theme">интернет магазин</span>
-                                        <h3 class="portfolio-item__title">Fast Food</h3>
-                                    </div>
-                                </a>
-                            </article>
-                        </li>
-                    </ul>
+                <ul class="projects__list">
+                    <li class="projects__item">
+                        <article class="portfolio-item">
+                            <a href="" class="portfolio-item__link">
+                                <div class="portfolio-item__bg"></div>
+                                <div class="container">
+                                    <span class="portfolio-item__theme">строительная компания</span>
+                                    <h3 class="portfolio-item__title">Evklid</h3>
+                                </div>
+                            </a>
+                        </article>
+                    </li>
+                    <li class="projects__item">
+                        <article class="portfolio-item">
+                            <a href="" class="portfolio-item__link">
+                                <div class="portfolio-item__bg portfolio-item__bg--second"></div>
+                                <div class="container">
+                                    <span class="portfolio-item__theme">Кухни от производителя</span>
+                                    <h3 class="portfolio-item__title">Anata kitchen</h3>
+                                </div>
+                            </a>
+                        </article>
+                    </li>
+                    <li class="projects__item">
+                        <article class="portfolio-item">
+                            <a href="" class="portfolio-item__link">
+                                <div class="portfolio-item__bg portfolio-item__bg--three"></div>
+                                <div class="container">
+                                    <span class="portfolio-item__theme">федеральная сеть POP-UP торговли</span>
+                                    <h3 class="portfolio-item__title">Promotion.ru</h3>
+                                </div>
+                            </a>
+                        </article>
+                    </li>
+                    <li class="projects__item">
+                        <article class="portfolio-item portfolio-item--burger">
+                            <a href="" class="portfolio-item__link">
+                                <div class="portfolio-item__bg portfolio-item__bg--four"></div>
+                                <div class="container">
+                                    <span class="portfolio-item__theme">интернет магазин</span>
+                                    <h3 class="portfolio-item__title">Fast Food</h3>
+                                </div>
+                            </a>
+                        </article>
+                    </li>
+                </ul>
                 <div class="container projects__container">
-                        <a href="index.html" class="projects__button flash-btn projects__button--link">
-                            Подробнее
-                        </a>
+                    <a href="index.html" class="projects__button flash-btn projects__button--link">
+                        Подробнее
+                    </a>
                 </div>
             </section>
         </main>
@@ -300,65 +302,63 @@
                     Контакты
                 </h3>
             </div>
-                <div class="footer__content">
-                    <div class="container footer-container-down">
-                        <a class="footer__link" href="#" id="main" aria-label="логотип разработчика">
-                            <img class="footer__logo" src="/img/Logo.png" alt="логотип разработчика">
+            <div class="footer__content">
+                <div class="container footer-container-down">
+                    <a class="footer__link" href="#" id="main" aria-label="логотип разработчика">
+                        <img class="footer__logo" src="/img/Logo.png" alt="логотип разработчика">
+                    </a>
+                    <nav class="footer__nav">
+                        <ul class="footer__list">
+                            <li class="footer__item">
+                                <a class="footer__link" href="#mainH">
+                                    главная
+                                </a>
+                            </li>
+                            <li class="footer__item">
+                                <a class="footer__link" href="#about">
+                                    обо мне
+                                </a>
+                            </li>
+                            <li class="footer__item">
+                                <a class="footer__link" href="#skills">
+                                    навыки
+                                </a>
+                            </li>
+                            <li class="footer__item">
+                                <a class="footer__link" href="#projects">
+                                    проекты
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="social">
+                        <a href="tel:+998991259009" class="footer-social" target="_blank">
+                            <div class="social__item social__item--phone">
+                                <span class="tooltip">Телефон</span>
+                                <svg class="svg-phone-dims">
+                                    <use xlink:href="/img/sprite.svg#phone"></use>
+                                </svg>
+                            </div>
                         </a>
-                        <nav class="footer__nav">
-                            <ul class="footer__list">
-                                <li class="footer__item">
-                                    <a class="footer__link" href="#mainH">
-                                        главная
-                                    </a>
-                                </li>
-                                <li class="footer__item">
-                                    <a class="footer__link" href="#about">
-                                        обо мне
-                                    </a>
-                                </li>
-                                <li class="footer__item">
-                                    <a class="footer__link" href="#skills">
-                                        навыки
-                                    </a>
-                                </li>
-                                <li class="footer__item">
-                                    <a class="footer__link" href="#projects">
-                                        проекты
-                                    </a>
-                                </li>
-                            </ul>
-                        </nav>
-                        <div class="footer__social social">
-                            <ul class="social__link">
-                                <li class="social__item social__item--phone">
-                                    <span class="tooltip">Телефон</span>
-                                    <a href="" class="footer-social">
-                                        <svg class="svg-phone-dims">
-                                            <use xlink:href="/img/sprite.svg#phone"></use>
-                                        </svg>
-                                    </a>
-                                </li>
-                                <li class="social__item">
-                                    <span class="tooltip">Телеграм</span>
-                                    <a href="" class="footer-social">
-                                        <svg class="svg-telegramm-dims">
-                                            <use xlink:href="/img/sprite.svg#telegram"></use>
-                                        </svg>
-                                    </a>
-                                </li>
-                                <li class="social__item">
-                                    <span class="tooltip">GitHub</span>
-                                    <a href="" class="footer-social">
-                                        <svg class="svg-github-dims">
-                                            <use xlink:href="/img/sprite.svg#github"></use>
-                                        </svg>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
+                        <a href="https://t.me/shuhriddin_90" class="footer-social" target="_blank">
+                            <div class="social__item">
+                                <span class="tooltip">Телеграм</span>
+                                <svg class="svg-telegramm-dims">
+                                    <use xlink:href="/img/sprite.svg#telegram"></use>
+                                </svg>
+                            </div>
+                        </a>
+                        <a href="https://github.com/Shuhriddin/projects" class="footer-social" target="_blank">
+                            <div class="social__item">
+                                <span class="tooltip">GitHub</span>
+                                <svg class="svg-github-dims">
+                                    <use xlink:href="/img/sprite.svg#github"></use>
+                                </svg>
+                            </div>
+                        </a>
                     </div>
                 </div>
+            </div>
         </footer>
     </div>
     <script type="module" src="vendor.js"></script>

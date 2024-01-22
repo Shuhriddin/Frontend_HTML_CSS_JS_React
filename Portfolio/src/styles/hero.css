@@ -156,9 +156,9 @@
     transition: transform .5s ease-in-out;
 }
 /* social media */
-.social__link {
+.social {
     display: flex;
-    list-style-type: none;
+    align-items: center;
 }
 .social__item {
     width: 55px;
@@ -183,6 +183,9 @@
     top: 50%;
     transform: translate(-50%, -50%);
     padding: 20px;
+}
+.social-item:not(:last-child) {
+    margin-right: 25px;
 }
 .tooltip {
     width: 100px;

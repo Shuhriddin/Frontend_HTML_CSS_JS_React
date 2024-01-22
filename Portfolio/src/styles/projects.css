@@ -97,6 +97,7 @@
     padding: 17px 40px;
     border: none;
     outline: none;
+    position: relative;
     border-radius: 10px;
     cursor: pointer;
     font-size: 24px;
@@ -106,6 +107,18 @@
     transition: transform .5s ease-in-out, outline-color .5s ease-in-out;
     outline: 1px solid transparent;
     outline-offset: 4px;
+}
+.projects__button::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    box-sizing: content-box;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 22px;
 }
 .projects__button:focus-visible {
     outline-color: var(--aztec-color);
@@ -119,7 +132,7 @@
 .flash-btn {
     position: relative;
     overflow: hidden;
-    box-shadow: 0px 0px 0px 0px rgba(9, 88, 50, .4);
+    box-shadow: 0px 0px 0px 0px var(--flash-btn-color);
 }
 .flash-btn::after {
     content: "";

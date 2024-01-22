@@ -19,9 +19,6 @@
         width: 15px;
         height: 15px;
     }
-    .projects__item:nth-child(-n+2) {
-        display: none;
-    }    
 }
 
 @media (max-width: 1625px) {

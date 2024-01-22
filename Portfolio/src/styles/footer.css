@@ -29,8 +29,10 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    list-style-type: none;
     font-family: "Cruin";
+}
+.footer-social:not(:last-child){
+    margin-right: 25px;
 }
 .footer__link {
     transition: visibility .5s ease-in-out;

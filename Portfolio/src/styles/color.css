@@ -13,7 +13,7 @@
     --blue-color: #0894e5;
     --logo-color: #f05f05;
     --hero-text: rgba(237, 237, 237, 0.70);
-    --liner-rgba: rgba(4, 37, 21, 0.822);
+    --liner-rgba: rgba(2, 29, 16, 0.792);
     --skills-item-color: rgba(6, 176, 161, 0.2);
     --html-circle-color: rgb(0, 247, 25);
     --css-circle-color: rgb(255, 0, 247);
@@ -30,4 +30,5 @@
     --gap: 20px;
     --elements: 4;
     --elementsMedia: 3;
+    --duble-ex-color: rgba(7, 161, 12, 0.412);
 }

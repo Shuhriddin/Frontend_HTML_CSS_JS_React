@@ -88,10 +88,10 @@ window.addEventListener("load", function () {
     loader.style.display = "none"
 })
 
-// modal send
+// modal menu
 var btn = document.getElementById("btn");
 btn.addEventListener("click", function (e) {
-    e.preventDefault()
+    e.preventDefault();
     var name = document.getElementById("name").value;
     var phone = document.getElementById("phone").value;
     var msg = document.getElementById("message").value;
@@ -104,13 +104,13 @@ btn.addEventListener("click", function (e) {
         nameError.innerHTML = 'Введите имя';
         setTimeout(function () {
             nameError.style.display = 'none';
-        }, 3000)
+        }, 3000);
         return false;
     } else if (name.length < 2) {
         nameError.innerHTML = 'Имя должно содержать как минимум 2 символа';
         setTimeout(function () {
             nameError.style.display = 'none';
-        }, 3000)
+        }, 3000);
         return false;
     }
 
@@ -118,7 +118,7 @@ btn.addEventListener("click", function (e) {
         phoneError.innerHTML = 'Введите телефон номер';
         setTimeout(function () {
             phoneError.style.display = 'none';
-        }, 3000)
+        }, 3000);
         return false;
     }
 
@@ -130,12 +130,70 @@ btn.addEventListener("click", function (e) {
         Body: body
     }).then(
         message => {
-            if (message == 'OK') {
+            if (message === 'OK') {
                 swal("Спасибо!", "Сообщение отправлено!", "success");
+                reset(); // Call the reset function after successful email sending
             } else {
                 swal("Ошибка", "Сообщение не отправлено!", "error");
             }
         }
     );
+});
 
+// Define the reset function
+function reset() {
+    document.getElementById("name").value = "";
+    document.getElementById("phone").value = "";
+    document.getElementById("message").value = "";
+}
+
+
+
+// -----Scroll Reveal------------====================================================================
+const sr = ScrollReveal({
+    origin: 'top',
+    distance: '80px',
+    duration: 2200,
+    reset: true,
+});
+
+sr.reveal(".hero__title", { delay: 100 });
+sr.reveal(".hero__content", { delay: 200 })
+sr.reveal(".about__title", { delay: 200 })
+sr.reveal(".skills__title", { delay: 200 })
+sr.reveal(".projects__title", { delay: 200 })
+sr.reveal(".footer__title", { delay: 200 })
+
+const srBottom = ScrollReveal({
+    origin: 'bottom',
+    distance: '80px',
+    duration: 2200,
+    reset: true,
+});
+
+sr.reveal(".hero__text", { delay: 100 });
+sr.reveal(".hero__btn", { delay: 100 });
+// sr.reveal(".social", { delay: 100 });
+sr.reveal(".about__text", { delay: 100 });
+sr.reveal(".projects__button", { delay: 100 });
+
+
+
+const srLeft = ScrollReveal({
+    origin: 'left',
+    distance: '80px',
+    duration: 2200,
+    reset: true,
 })
+
+srLeft.reveal(".skills__list", { delay: 100 })
+
+
+const srRight = ScrollReveal({
+    origin: 'right',
+    distance: '80px',
+    duration: 2200,
+    reset: true,
+});
+
+srRight.reveal(".projects__list", { delay: 100 })

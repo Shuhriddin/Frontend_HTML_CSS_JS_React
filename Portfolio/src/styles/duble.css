@@ -50,6 +50,10 @@
     padding-top: 100px;
     padding-bottom: 100px;
     background: var(--aztec-color);
+    background-image: linear-gradient(var(--aztec-color), var(--liner-rgba)), url(/img/man.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
 }
 .my-profile {
     width: 100%;
@@ -58,12 +62,12 @@
     justify-content: space-between;    
 }
 .my-profile__textBox{
-    width: 48%;
+    max-width: 50%;
 }
 .my-profile__title {
     color: var(--help-color);
     font-family: "Gordita";
-    font-size: 40px;
+    font-size: clamp(30px, 4vw, 100px);
     margin: 0;
     padding: 0;
     margin-bottom: 30px;
@@ -74,8 +78,8 @@
     margin: 0;
     padding: 0;
     color: var(--sec-bg-color);
-    font-size: 24px;
-    line-height: 40px;
+    font-size: clamp(0.75rem, 0.6rem + 0.75vw, 1.5rem);
+    line-height: clamp(30px, 2vw, 100px);
     text-align: justify;
     font-family: "Cruin";
 }
@@ -120,45 +124,132 @@
     padding-top: 100px;
     padding-bottom: 100px;
 }
-
+.portfolio-container{
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.portfolio-caption{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .portfolio-title{
+    width: 50%;
+    text-align: center;
+    position: relative;
     margin: 0;
     padding: 0;
-    color: var(--aztec-color);
-    font-size: 40px;
+    color: var(--black-color);
+    font-family: 'Gordita';
+    font-size: 54px;
+    font-weight: 500;
     margin-bottom: 75px;
-    text-align: center;
-    font-family: "Gordita";
-    font-weight: 700;
 }
-.tabs {
+.portfolio-title::before {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
     width: 100%;
-    height: 100%;
+    height: 3px;
+    background: var(--black-color);
 }
-.tabs__nav{
+.portfolio-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 30%;
+    width: 40%;
+    height: 3px;
+    background: var(--help-color);
+}
+.boxing{
     width: 100%;
-    margin-bottom: 45px;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.tabs__nav-btn{
-    background: transparent;
-    border: none;
-    outline: none;
-    color: var(--js-circle-color);
-    font-size: 24px;
-    background: var(--aztec-color);
-    padding: 14px 36px;
-    border-radius: 8px;
+.tab-box{
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    position: relative;
+    border-bottom: 2px solid var(--pr-btn-color);
+}
+.tab-btn{
     cursor: pointer;
-    box-shadow: 0px 0px 27px 2px var(--pr-btn-color);
+    font-weight: 600;
+    font-size: 32px;
+    font-family: "Cruin";
+    color: var(--aztec-color);
+    border: none;
+    background: transparent;
+    padding: 18px;
+    transition: all .5s ease-in-out;
 }
-.tabs__nav-btn:not(:last-child){
-    margin-right: 100px;
+.tab-btn:not(:last-child){
+    margin-right: 5%;
 }
-.tabs__item {
-    display: none;
+.tab-btn.active{
+    position: relative;
+    display: inline-block;
+    padding: 10px 30px;
+    border-radius: 10px;
+    background: var(--aztec-color);
+    color: var(--js-circle-color);
+    transition: all .5s ease-in-out;
+}
+.content-box{
+    width: 100%;
+    padding: 20px;
 }
 
-.tabs__item--active {
+.content {
+    display: none;
+    animation: moving .5s ease;
+}
+@keyframes moving {
+    from{
+        transform: translateX(50px);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+.content.active{
     display: block;
+}
+
+.content .content-title{
+    margin: 0;
+    padding: 0;
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-size: 24px;
+    color: var(--aztec-color);
+}
+.content-title span{
+    color: var(--remove-color);
+}
+.frontend-list{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.frontentd-video{
+    max-width: 500px;
 }

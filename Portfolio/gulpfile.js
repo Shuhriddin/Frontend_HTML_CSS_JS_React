@@ -5,6 +5,7 @@ const {
     watch
 } = require('gulp');
 
+const gulp = require('gulp');
 const autoprefixes = require('gulp-autoprefixer');
 const cleanCSS = require('gulp-clean-css');
 const del = require('del')
@@ -30,7 +31,10 @@ const ttf2woff = require('gulp-ttf2woff')
 const plumber = require('gulp-plumber')
 const sourcemaps = require('gulp-sourcemaps');
 
-
+function copyVideo() {
+    return gulp.src('src/videos/*')
+      .pipe(gulp.dest('app/videos'));
+  }
 
 let isProd = false; // dev by default
 
@@ -273,9 +277,11 @@ exports.htmlMinify = htmlMinify
 exports.svgSprites = svgSprites
 exports.fonts = fonts
 exports.clean = clean
+exports.copyVideo = copyVideo;
 
-exports.default = series(clean, htmlMinify, fonts, styles, scripts, resources, images, svgSprites, watchFiles)
-exports.backend = series(clean, fonts, htmlInclude, backendScripts, backendStyles, resources, images, svgSprites)
+
+exports.default = series(clean, htmlMinify, fonts, styles, scripts, resources, images, copyVideo, svgSprites, watchFiles)
+exports.backend = series(clean, fonts, htmlInclude, backendScripts, backendStyles, resources, images, copyVideo, svgSprites)
 exports.build = series(toProd, clean, fonts, htmlInclude, scripts, styles, resources, images, svgSprites, htmlMinify);
 exports.cache = series(cache, rewrite);
 

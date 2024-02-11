@@ -11,7 +11,7 @@ window.addEventListener("scroll", function () {
 })
 
 // модальное окно
-document.getElementById('open-modal-btn').addEventListener("click", function () {
+document.getElementById('open-modal-btn').addEventListener("click", ()=>{
     document.getElementById('my-modal').classList.add('open')
 })
 document.getElementById('close-my-modal-btn').addEventListener("click", function () {
@@ -176,6 +176,8 @@ sr.reveal(".hero__btn", { delay: 100 });
 // sr.reveal(".social", { delay: 100 });
 sr.reveal(".about__text", { delay: 100 });
 sr.reveal(".projects__button", { delay: 100 });
+sr.reveal(".skills__list", { delay: 100 })
+
 
 
 
@@ -185,8 +187,7 @@ const srLeft = ScrollReveal({
     duration: 2200,
     reset: true,
 })
-
-srLeft.reveal(".skills__list", { delay: 100 })
+// srLeft.reveal(".skills__list", { delay: 100 })
 
 
 const srRight = ScrollReveal({
@@ -197,3 +198,15 @@ const srRight = ScrollReveal({
 });
 
 srRight.reveal(".projects__list", { delay: 100 })
+
+
+// tabs 
+// const tabs = document.querySelectorAll('.tab_btn');
+// const all_content = document.querySelectorAll('.content');
+
+// tabs.forEach((tab, index)=>{
+//     tab.addEventListener('click', ()=> {
+//         tab.classList.add("active")
+//     })
+// })
+

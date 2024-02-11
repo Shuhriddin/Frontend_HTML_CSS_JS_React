@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Проекты и прочее</title>
     <link rel="shortcut icon" href="/img/Logo.png" type="image/x-icon">
+    <link href="https://unpkg.com/video.js/dist/video-js.min.css" rel="stylesheet">
     <link rel="stylesheet" href="main.css">
 </head>
 
@@ -31,49 +32,85 @@
                         в&nbsp;их&nbsp;работе. В&nbsp;моей жизни много перемен и&nbsp;я&nbsp;всегда готов к&nbsp;новому.
                         Я&nbsp;увлекаюсь технологиями fullstack-разработки, люблю изучать новые языки программирования.</p>
                 </div>
-                <div class="my-profile__photoBox">
-                        <img class="my-profile-img" src="/img/re.png" alt="мой фото">
-                </div>    
             </div>    
         </section>
         <section class="portfolio-section">
             <div class="container portfolio-contaier">
-                <h2 class="portfolio-title">
-                    Проекты
-                </h2>
-                <div class="tabs portfolio-wrapper">
-                    <div class="tabs__nav">
-                        <button class="tabs__nav-btn tabs__nav-btn--active" type="button" data-tab="#tab_1">HTML & CSS</button>
-                        <button class="tabs__nav-btn" type="button" data-tab="#tab_2">JavaScript</button>
-                        <button class="tabs__nav-btn" type="button" data-tab="#tab_3">React</button>
-                        <button class="tabs__nav-btn" type="button" data-tab="#tab_4">Python</button>
-                    </div>
-
-                    <div class="tabs__content">
-                        <div class="tabs__item tabs__item--active" id="tab_1">
-                            <h3>Проводим консультацию</h3>
-                            <p>Влечет за собой процесс внедрения и модернизации приоритизации разума над эмоциями. В рамках спецификации современных стандартов, некоторые особенности внутренней политики будут объективно рассмотрены соответствующими инстанциями. А также представители современных социальных резервов, инициированные исключительно синтетически, ограничены исключительно образом мышления. Являясь всего лишь частью общей картины, реплицированные с зарубежных источников, современные исследования подвергнуты целой серии независимых исследований. Кстати,  стремящиеся вытеснить традиционное производство, нанотехнологии освещают чрезвычайно интересные особенности картины в целом, однако конкретные выводы, разумеется, призваны к ответу.</p>
-                        </div>
-                        <div class="tabs__item" id="tab_2">
-                            <h3>Составляем смету</h3>
-                            <p>Внедрения и модернизации приоритизации разума над эмоциями. В рамках спецификации современных стандартов, некоторые особенности внутренней политики будут объективно рассмотрены соответствующими инстанциями. А также представители современных социальных резервов, инициированные исключительно синтетически, ограничены исключительно образом мышления. Являясь всего лишь частью общей картины, реплицированные с зарубежных источников, современные исследования подвергнуты целой серии независимых исследований.</p>
-                        </div>
-                        <div class="tabs__item" id="tab_3">
-                            <h3>Привлекаем подрядчиков</h3>
-                            <p>Идейные соображения высшего порядка, а также новая модель организационной деятельности требует анализа прогресса профессионального сообщества. Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого факта: высококачественный прототип будущего проекта напрямую зависит от дальнейших направлений развития. Разнообразный и богатый опыт говорит нам, что новая модель организационной деятельности говорит о возможностях системы массового участия. Принимая во внимание показатели успешности, постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет выполнить важные задания по разработке прогресса профессионального сообщества.</p>
-                        </div>
-                        <div class="tabs__item" id="tab_4">
-                            <h3>Инспектируем все этапы работ</h3>
-                            <p>Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого факта: высококачественный прототип будущего проекта напрямую зависит от дальнейших направлений развития. Разнообразный и богатый опыт говорит нам, что новая модель организационной деятельности говорит о возможностях системы массового участия. Принимая во внимание показатели успешности, постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет.</p>
-                        </div>
-                    </div>
-
+                <div class="portfolio-caption">
+                    <h2 class="portfolio-title">
+                        Проекты
+                    </h2>
                 </div>
+                <div class="boxing">
+                    <div class="tab-box">
+                        <button class="tab-btn active">HTML&CSS</button>
+                        <button class="tab-btn">JavaScript</button>
+                        <button class="tab-btn">Python</button>
+                        <!-- <div class="line"></div> -->
+                    </div>
+                </div>
+
+                <div class="content-box">
+                    <div class="content active">
+                        <ul class="frontend-list">
+                            <li class="frontend-item">
+                                <h3 class="content-title">3D<span> Модилирования</span></h3>
+                                <video class="frontentd-video" controls>
+                                    <source src="/videos/3D.mp4" type="video/mp4">
+                                </video>
+                            </li>
+                            <li class="frontend-item">
+                                <h3 class="content-title">3D<span> Модилирования</span></h3>
+                                <video class="frontentd-video" controls>
+                                    <source src="/videos/3D.mp4" type="video/mp4">
+                                </video>
+                            </li>
+                            <li class="frontend-item">
+                                <h3 class="content-title">3D<span> Модилирования</span></h3>
+                                <video class="frontentd-video" controls>
+                                    <source src="/videos/3D.mp4" type="video/mp4">
+                                </video>
+                            </li>
+                        </ul> 
+                    </div>
+                    <div class="content">
+                        <h3 class="content-title">JavaScript</h3>
+                        <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil maiores ipsa sint vero in corrupti sunt nam velit, fugiat accusamus. Sunt, vero doloribus.
+                        </p>
+                    </div>
+                    <div class="content">
+                        <h3 class="content-title">Python</h3>
+                        <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil maiores ipsa sint vero in corrupti sunt nam velit, fugiat accusamus. Sunt, vero doloribus.
+                        </p>
+                    </div>
+                </div>
+                
             </div>
         </section>
     </div>
+    <script>
+        const tabs = document.querySelectorAll('.tab-btn');
+        const all_content = document.querySelectorAll('.content');
 
-    <script type="module" src="app.js"></script>
+        tabs.forEach((tab, index)=>{
+            tab.addEventListener('click', (e)=> {
+                tabs.forEach(tab=>{tab.classList.remove('active')})
+                tab.classList.add("active")
+                
+            //     var line = document.querySelector('.line');
+            // line.style.width = e.target.offsetWidth + "px";
+            // line.style.left = e.target.offsetLeft + "px";
+
+            all_content.forEach(content=>{content.classList.remove('active')})
+            all_content[index].classList.add('active');
+            })
+        })
+    </script>
+    <!-- <script type="module" src="app.js"></script> -->
+    <!-- <script src="https://vjs.zencdn.net/8.10.0/video.min.js"></script> -->
+    <script src="https://unpkg.com/video.js/dist/video.min.js"></script>
 </body>
 
 </html>

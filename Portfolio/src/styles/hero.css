@@ -1,7 +1,7 @@
 .hero {
     padding-top: 250px;
     padding-bottom: 100px;
-    background-image: linear-gradient(var(--aztec-color), var(--liner-rgba)), url(/img/geminy.jpg);
+    background-image: linear-gradient(var(--aztec-color), var(--liner-rgba)), url(/img/mans.jpg);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;

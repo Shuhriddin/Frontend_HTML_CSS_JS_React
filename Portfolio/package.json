@@ -38,6 +38,8 @@
   },
   "dependencies": {
     "gulp-ttf2woff": "^1.1.1",
-    "gulp-uglify": "^3.0.2"
+    "gulp-uglify": "^3.0.2",
+    "typograf": "^6.15.1",
+    "video.js": "^8.10.0"
   }
 }

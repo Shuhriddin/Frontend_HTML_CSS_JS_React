@@ -1,0 +1,61 @@
+@import './color.css';
+
+.hero-six {
+    background: var(--diesel);
+}
+
+.hero-six {
+    background-image: url(../img/008.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hero-container--six {
+    position: relative;
+}
+
+.hero-six--box {
+    padding: 50px 0;
+}
+.video-container {
+    padding-bottom: 107px;
+}
+
+.hero-six--title {
+    margin: 0;
+    font-size: 100px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    color: var(--whiteColor);
+}
+
+.video-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.full {
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+}
+
+.left-item--six:not(:last-child) {
+    margin-bottom: 30px;
+}
+
+.left-item--six {
+    width: 17px;
+    height: 3px;
+    background: var(--whiteColor);
+}
+
+.left-item--six:nth-child(6) {
+    width: 34px;
+    background: var(--scorpion);
+}

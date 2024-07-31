@@ -1,0 +1,81 @@
+@import './color.css';
+
+.hero-seven {
+    background: var(--botticelli);
+    padding: 50px 0;
+}
+.hero-container--seven {
+    position: relative;
+}
+
+
+.left-item--seven:not(:last-child) {
+    margin-bottom: 30px;
+}
+.left-item--seven {
+    width: 17px;
+    height: 3px;
+    background: var(--black);
+    cursor: pointer;
+}
+
+.left-item--seven:nth-child(7) {
+    width: 34px;
+    background: var(--redRibbon);
+}
+
+.left-numbers--hero-7 p {
+    color: var(--black);
+}
+
+.left-text--7 span {
+    color: var(--black);
+}
+
+.hero-seven--box {
+    margin-bottom: 40px;
+}
+
+.hero-seven--title {
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 26px;
+    letter-spacing: 0.4px;
+    color: var(--miniShaft);
+    margin-bottom: 30px;
+}
+
+.hero-seven--text {
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    color: var(--miniShaft);
+}
+
+
+.map-container {
+    position: relative;
+}
+
+.cards-list--two {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.svg-map-dims {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+.svg-map-dims, .svg-map-dims use {
+    width: 1110px;
+    height: 778px;
+}

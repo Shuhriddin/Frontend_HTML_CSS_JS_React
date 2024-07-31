@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anata Kitchen</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body class="dark">
+    <header class="header">
+        <div class="container header__container">
+            <div class="start">
+                <label for="checkbox" class="checkbox">
+                    <input class="checkbox__inp" type="checkbox" id="checkbox" checked>
+                    <span class="checkbox__inner">
+                        <span class="l-34">тёмная тема</span>
+                        <span class="l-35">белая тема</span>
+                    </span>
+                </label>
+            </div>
+            <div class="header__up flex">
+                <div class="header__logo">
+                    <a href="#" class="logo">
+                        <svg class="svg-logo-dims">
+                            <use xlink:href="/img/sprite.svg#logo"></use>
+                        </svg>
+                    </a>
+                </div>
+                <div class="header__up--right">
+                    <ul class="list-adress list-reset flex">
+                        <li class="list-adress__item">
+                            <p class="list-adress__item--descr adress">
+                                Москва, <br />
+                                Дмитровское шоссе, д 62 стр 5
+                            </p>
+                        </li>
+                        <li class="list-adress__item between">
+                            <div class="child flex">
+                                <a href="#" class="phone-number">+7 499 321-20-63</a>
+                                <button class="phone btn-reset">Заказать звонок</button>
+                            </div>
+                            <div class="glock">
+                                <span class="glock__span"> 9:00 - 20:00 </span>
+                                <p class="glock__descr list-reset">ежедневно</p>
+                            </div>
+                        </li>
+                        <li class="list-adress__item">
+                            <div class="like">
+                                <button class="heart-button" id="heart-button" onclick="liked()">
+                                    <a href="#" class="heart__link">
+                                        <svg class="svg-heart-dims">
+                                            <use xlink:href="/img/sprite.svg#heart"></use>
+                                        </svg>
+                                    </a>
+                                    <span class="counter">3</span>
+                                    <i class="fa fa-thumbs-up"></i>
+                                </button>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="header__down flex">
+                <div class="header__down--left flex">
+                    <div class="burger" aria-label="Бургер меню">
+                        <button class="burger__menu btn-reset">
+                            <span class="burger__line"></span>
+                            <span class="burger__line"></span>
+                            <span class="burger__line"></span>
+                        </button>
+                    </div>
+                    <nav class="nav">
+                        <ul class="nav__list list-reset flex">
+                            <li class="nav__item">
+                                <a class="nav__link" href="#">Каталог</a>
+                            </li>
+                            <li class="nav__item">
+                                <a class="nav__link" href="#">Наши работы</a>
+                            </li>
+                            <li class="nav__item">
+                                <a class="nav__link" href="#">Отзывы</a>
+                            </li>
+                            <li class="nav__item">
+                                <a class="nav__link" href="#">Видео</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="#" class="nav__link nav__item--link">Телеграм
+                                    <svg class="svg-telegram-svgrepo-com-dims">
+                                        <use xlink:href="/img/sprite.svg#telegram-svgrepo-com"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div id="indicator"></div>
+                </div>
+                <div class="header__down--right flex">
+                    <button class="project footer__project flex btn-reset">
+                        <a href="#" class="project__icon flex footer__icon">
+                            <svg class="svg-project-icon-dims">
+                                <use xlink:href="/img/sprite.svg#project-icon"></use>
+                            </svg>
+                            <span class="project__span">Проект + Расчет</span>
+                            <span class="help">5 вариантов за 5 минут</span>
+                        </a>
+                    </button>
+                    <button class="line header__btn line-btn1 flex btn-reset" id="header__btn">
+                        <a href="#" class="line__icon flex">
+                            <svg class="svg-line-icon-dims">
+                                <use xlink:href="/img/sprite.svg#line-icon"></use>
+                            </svg>
+                            <span class="enable">Вызвать замерщика с образцами</span>
+                        </a>
+                    </button>
+                    <div class="line-list flex">
+                        <div class="line-list-one">
+                            <h2 class="line__title list-reset">Стиль</h2>
+                            <ul class="list-reset flex line-list-first">
+                                <li class="line-item"><a href="#">Классика</a></li>
+                                <li class="line-item"><a href="#">Неоклассика</a></li>
+                                <li class="line-item"><a href="#">Прованс</a></li>
+                                <li class="line-item"><a href="#">Современный</a></li>
+                                <li class="line-item"><a href="#">Скандинавский</a></li>
+                                <li class="line-item"><a href="#">Лофт</a></li>
+                                <li class="line-item"><a href="#">Барокко</a></li>
+                                <li class="line-item"><a href="#">Минимализм</a></li>
+                            </ul>
+                            <button class="lineBtn flex btn-reset">
+                                <a href="#" class="project__icon flex footer__icon">
+                                    <svg class="svg-project-icon-dims">
+                                        <use xlink:href="/img/sprite.svg#project-icon"></use>
+                                    </svg>
+                                    <span class="project__span">Проект + Расчет</span>
+                                    <span class="help help-1">5 вариантов за 5 минут</span>
+                                </a>
+                            </button>
+                        </div>
+                        <div class="line-list-second">
+                            <h2 class="line__title list-reset">Фасад</h2>
+                            <ul class="list-reset line-list-first flex">
+                                <li class="line-item"><a href="#">МДФ</a></li>
+                                <li class="line-item"><a href="#">Эмаль</a></li>
+                                <li class="line-item"><a href="#">Пластик</a></li>
+                                <li class="line-item"><a href="#">Массив дерева</a></li>
+                                <li class="line-item"><a href="#">Акрил</a></li>
+                                <li class="line-item"><a href="#">ЛДСП</a></li>
+                                <li class="line-item"><a href="#">Дуб</a></li>
+                                <li class="line-item"><a href="#">Шпон</a></li>
+                            </ul>
+                            <button class="line header__btn flex btn-reset">
+                                <a href="#" class="line__icon flex">
+                                    <svg class="svg-line-icon-dims">
+                                        <use xlink:href="/img/sprite.svg#line-icon"></use>
+                                    </svg>
+                                    <span class="enable">Вызвать замерщика с образцами</span>
+                                </a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <section class="section hero">
+            <div class="hero__container container flex">
+                <div class="hero__container--left">
+                    <span class="hero__container--rect"></span>
+                </div>
+                <div class="hero__container--right flex">
+                    <div class="box">
+                        <p class="box__text list-reset">Кухни от производителя</p>
+                        <h2 class="box__title list-reset">-40%</h2>
+                        <p class="box__descr list-reset">На коллекции кухонь</p>
+                    </div>
+                    <button type="button" class="hero__button">Выбрать</button>
+                </div>
+            </div>
+        </section>
+        <section class="section section-offsets video">
+            <div class="container video__container">
+                <h2 class="video__title list-reset">
+                    Специально для Вас видео наших кухонь
+                </h2>
+                <ul class="video__list list-reset flex">
+                    <li class="video__item" id="light">
+                        <a class="video__link" id="boxclose" onclick="lightbox_close();">
+                            <div class="hs-responsive-embed-youtube">
+                                <iframe class="full" src="https://www.youtube.com/embed/Nfc8pclw43w">
+                                </iframe>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="video__item">
+                        <a class="video__link" onclick="lightbox_close();">
+                            <div class="hs-responsive-embed-youtube">
+                                <iframe width="460" height="315" src="https://www.youtube.com/embed/icub01lUBXQ"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="video__item">
+                        <a class="video__link" href="https://youtu.be/e6YuJK1isC0" onclick="lightbox_close();">
+                            <div class="hs-responsive-embed-youtube">
+                                <iframe width="460" height="315" src="https://www.youtube.com/embed/YmwXW-u-7D0"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    allowfullscreen></iframe>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <button class="watch-btn btn-reset">
+                    <a href="#" class="watch-btn-link"> Смотреть больше видео </a>
+                </button>
+            </div>
+        </section>
+
+        <section class="section clients section-offsets">
+            <div class="container clients__container">
+                <h2 class="clients__tiitle list-reset">
+                    Живые фотографии наших работ от реальных клиентов 🥰
+                </h2>
+                <ul class="clients__list list-reset flex">
+                    <li class="clients__item">
+                        <div class="clients__fon">
+                            <div class="clients__fon--img">
+                                <img src=" img/Teramo.jpg" alt="кухня Teramo" />
+                                <button class="clients__btn">
+                                    <svg class="svg-youtube-dims">
+                                        <use xlink:href="/img/sprite.svg#youtube"></use>
+                                    </svg>
+                                    <a href="#" class="clients__btn--link">Видеообзор</a>
+                                </button>
+                                <button class="clients__btn--two">
+                                    <svg class="svg-youtube-dims svg-user-dims">
+                                        <use xlink:href="/img/sprite.svg#user"></use>
+                                    </svg>
+                                    <a href="#" class="clients__btn--link">Видеоотзыв</a>
+                                </button>
+                                <button class="clients__heart--btn">
+                                    <svg class="svg-hearticon-dims">
+                                        <use xlink:href="/img/sprite.svg#hearticon"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="clients__content flex">
+                                <div class="clients__top">
+                                    <h3 class="clients__caption list-reset">Кухня Teramo</h3>
+                                    <ul class="clients__child list-reset flex">
+                                        <li class="clients__icons flex">
+                                            <span class="clients__icons--span"> Массив дуба </span>
+                                            <span class="clients__icons--sp">
+                                                <svg class="svg-icon-01-dims">
+                                                    <use xlink:href="/img/sprite.svg#icon-01"></use>
+                                                </svg>
+                                            </span>
+                                        </li>
+                                        <li class="clients__icons flex">
+                                            <span class="clients__icons--span"> Фрезеровка </span>
+                                            <span class="clients__icons--sp">
+                                                <svg class="svg-icon-01-dims">
+                                                    <use xlink:href="/img/sprite.svg#icon-01"></use>
+                                                </svg>
+                                            </span>
+                                        </li>
+                                        <li class="clients__icons flex">
+                                            <span class="clients__icons--span"> 7,2 м.п. </span>
+                                            <span class="clients__icons--sp">
+                                                <svg class="svg-icon-01-dims">
+                                                    <use xlink:href="/img/sprite.svg#icon-01"></use>
+                                                </svg>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                    <div class="clients__button flex">
+                                        <div class="clients__button--left flex">
+                                            <p class="clients__button--descr list-reset">
+                                                125 000 ₽
+                                            </p>
+                                            <del class="clients__button--del">147 000 ₽</del>
+                                        </div>
+                                        <div class="clienst__button--right">
+                                            <button class="clients__button--btn btn-reset">
+                                                Рассчитать эту кухню
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="clients__item">
+                        <div class="clients__fon">
+                            <div class="clients__fon--img">
+                                <img src="img/integr-second.jpg" alt="кухня Teramo" />
+                                <button class="clients__btn">
+                                    <svg class="svg-youtube-dims">
+                                        <use xlink:href="/img/sprite.svg#youtube"></use>
+                                    </svg>
+                                    <a href="#" class="clients__btn--link">Видеообзор</a>
+                                </button>
+                                <button class="clients__heart--button">
+                                    <svg class="svg-hearticon-dims">
+                                        <use xlink:href="/img/sprite.svg#hearticon"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="clients__content flex">
+                                <div class="clients__top">
+                                    <h3 class="clients__caption list-reset">Кухня Integrato</h3>
+                                    <ul class="clients__child list-reset flex">
+                                        <li class="clients__icons flex">
+                                            <span class="clients__icons--span">
+                                                Cleaf + Эмаль
+                                            </span>
+                                            <span class="clients__icons--sp">
+                                                <svg class="svg-icon-01-dims">
+                                                    <use xlink:href="/img/sprite.svg#icon-01"></use>
+                                                </svg>
+                                            </span>
+                                        </li>
+                                        <li class="clients__icons flex">
+                                            <span class="clients__icons--span">
+                                                Система без ручек
+                                            </span>
+                                            <span class="clients__icons--sp">
+                                                <svg class="svg-icon-01-dims">
+                                                    <use xlink:href="/img/sprite.svg#icon-01"></use>
+                                                </svg>
+                                            </span>
+                                        </li>
+                                        <li class="clients__icons flex">
+                                            <span class="clients__icons--span"> 4,2 м.п. </span>
+                                            <span class="clients__icons--sp">
+                                                <svg class="svg-icon-01-dims">
+                                                    <use xlink:href="/img/sprite.svg#icon-01"></use>
+                                                </svg>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                    <div class="clients__button flex">
+                                        <div class="clients__button--left flex">
+                                            <p class="clients__button--descr list-reset">
+                                                180 000 ₽
+                                            </p>
+                                            <del class="clients__button--del">220 000 ₽</del>
+                                        </div>
+                                        <div class="clienst__button--right">
+                                            <button class="clients__button--btn btn-reset">
+                                                Рассчитать эту кухню
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="clients__item">
+                        <div class="clients__fon">
+                            <div class="clients__fon--img">
+                                <img src="img/integrato-2.jpg" alt="кухня Teramo" />
+                                <button class="clients__btn">
+                                    <svg class="svg-youtube-dims">
+                                        <use xlink:href="/img/sprite.svg#youtube"></use>
+                                    </svg>
+                                    <a href="#" class="clients__btn--link">Видеообзор</a>
+                                </button>
+                                <button class="clients__btn--two">
+                                    <svg class="svg-youtube-dims svg-user-dims">
+                                        <use xlink:href="/img/sprite.svg#user"></use>
+                                    </svg>
+                                    <a href="#" class="clients__btn--link">Видеоотзыв</a>
+                                </button>
+                                <button class="clients__heart--btn">
+                                    <svg class="svg-hearticon-dims">
+                                        <use xlink:href="/img/sprite.svg#hearticon"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="clients__content flex">
+                                <div class="clients__top">
+                                    <h3 class="clients__caption list-reset">Кухня Integrato</h3>
+                                    <ul class="clients__child list-reset flex">
+                                        <li class="clients__icons flex">
+                                            <span class="clients__icons--span"> Пластик </span>
+                                            <span class="clients__icons--sp">
+                                                <svg class="svg-icon-01-dims">
+                                                    <use xlink:href="/img/sprite.svg#icon-01"></use>
+                                                </svg>
+                                            </span>
+                                        </li>
+                                        <li class="clients__icons flex">
+                                            <span class="clients__icons--span">
+                                                Система без ручек
+                                            </span>
+                                            <span class="clients__icons--sp">
+                                                <svg class="svg-icon-01-dims">
+                                                    <use xlink:href="/img/sprite.svg#icon-01"></use>
+                                                </svg>
+                                            </span>
+                                        </li>
+                                        <li class="clients__icons flex">
+                                            <span class="clients__icons--span"> 7,2 м.п. </span>
+                                            <span class="clients__icons--sp">
+                                                <svg class="svg-icon-01-dims">
+                                                    <use xlink:href="/img/sprite.svg#icon-01"></use>
+                                                </svg>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                    <div class="clients__button flex">
+                                        <div class="clients__button--left flex">
+                                            <p class="clients__button--descr list-reset">
+                                                270 000 ₽
+                                            </p>
+                                            <del class="clients__button--del">357 000 ₽</del>
+                                        </div>
+                                        <div class="clienst__button--right">
+                                            <button class="clients__button--btn btn-reset">
+                                                Рассчитать эту кухню
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="clients__item">
+                        <div class="clients__fon">
+                            <div class="clients__fon--img">
+                                <img src="img/integrato-3.jpg" alt="кухня Teramo" />
+                                <button class="clients__btn">
+                                    <svg class="svg-youtube-dims">
+                                        <use xlink:href="/img/sprite.svg#youtube"></use>
+                                    </svg>
+                                    <a href="#" class="clients__btn--link">Видеообзор</a>
+                                </button>
+                                <button class="clients__heart--button">
+                                    <svg class="svg-hearticon-dims">
+                                        <use xlink:href="/img/sprite.svg#hearticon"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="clients__content flex">
+                                <div class="clients__top">
+                                    <h3 class="clients__caption list-reset">Кухня Integrato</h3>
+                                    <ul class="clients__child list-reset flex">
+                                        <li class="clients__icons flex">
+                                            <span class="clients__icons--span"> Массив дуба </span>
+                                            <span class="clients__icons--sp">
+                                                <svg class="svg-icon-01-dims">
+                                                    <use xlink:href="/img/sprite.svg#icon-01"></use>
+                                                </svg>
+                                            </span>
+                                        </li>
+                                        <li class="clients__icons flex">
+                                            <span class="clients__icons--span">
+                                                Система без ручек
+                                            </span>
+                                            <span class="clients__icons--sp">
+                                                <svg class="svg-icon-01-dims">
+                                                    <use xlink:href="/img/sprite.svg#icon-01"></use>
+                                                </svg>
+                                            </span>
+                                        </li>
+                                        <li class="clients__icons flex">
+                                            <span class="clients__icons--span"> 7,2 м.п. </span>
+                                            <span class="clients__icons--sp">
+                                                <svg class="svg-icon-01-dims">
+                                                    <use xlink:href="/img/sprite.svg#icon-01"></use>
+                                                </svg>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                    <div class="clients__button flex">
+                                        <div class="clients__button--left flex">
+                                            <p class="clients__button--descr list-reset">
+                                                230 000 ₽
+                                            </p>
+                                            <del class="clients__button--del">280 000 ₽</del>
+                                        </div>
+                                        <div class="clienst__button--right">
+                                            <button class="clients__button--btn btn-reset">
+                                                Рассчитать эту кухню
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <button class="watch-btn btn-reset">
+                    <a href="#" class="watch-btn-link"> Смотреть все работы </a>
+                </button>
+            </div>
+        </section>
+    </main>
+    <!-- end main -->
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="footer__up">
+                <ul class="footer__up--list flex list-reset">
+                    <li class="footer__up--item">
+                        <h3 class="footer__up--item-caption">Стиль</h3>
+                        <ul class="footer__list--child flex list-reset">
+                            <li class="footer__item--in">
+                                <a href="#" class="footer__item--in-link">Классика</a>
+                            </li>
+                            <li class="footer__item--in">
+                                <a href="#" class="footer__item--in-link">Неоклассика</a>
+                            </li>
+                            <li class="footer__item--in">
+                                <a href="#" class="footer__item--in-link">Прованс</a>
+                            </li>
+                            <li class="footer__item--in">
+                                <a href="#" class="footer__item--in-link">Современный</a>
+                            </li>
+                            <li class="footer__item--in">
+                                <a href="#" class="footer__item--in-link">Скандинавский</a>
+                            </li>
+                            <li class="footer__item--in">
+                                <a href="#" class="footer__item--in-link">Лофт</a>
+                            </li>
+                            <li class="footer__item--in">
+                                <a href="#" class="footer__item--in-link">Барокко</a>
+                            </li>
+                            <li class="footer__item--in">
+                                <a href="#" class="footer__item--in-link">Минимализм</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="footer__up--item">
+                        <h3 class="footer__up--item-caption">Фасад</h3>
+                        <ul class="footer__list--child flex list-reset">
+                            <li class="footer__item--in">
+                                <a href="#" class="footer__item--in-link">МДФ</a>
+                            </li>
+                            <li class="footer__item--in">
+                                <a href="#" class="footer__item--in-link">Эмаль</a>
+                            </li>
+                            <li class="footer__item--in">
+                                <a href="#" class="footer__item--in-link">Пластик</a>
+                            </li>
+                            <li class="footer__item--in">
+                                <a href="#" class="footer__item--in-link">Массив дерева</a>
+                            </li>
+                            <li class="footer__item--in">
+                                <a href="#" class="footer__item--in-link">Акрил</a>
+                            </li>
+                            <li class="footer__item--in">
+                                <a href="#" class="footer__item--in-link">ЛДСП</a>
+                            </li>
+                            <li class="footer__item--in">
+                                <a href="#" class="footer__item--in-link">Дуб</a>
+                            </li>
+                            <li class="footer__item--in">
+                                <a href="#" class="footer__item--in-link">Шпон</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="footer__up--item">
+                        <h3 class="footer__up--item-caption">Форма кухни</h3>
+                        <ul class="footer__list--child flex list-reset">
+                            <li class="footer__item--in">
+                                <a href="#" class="footer__item--in-link">Прямые</a>
+                            </li>
+                            <li class="footer__item--in">
+                                <a href="#" class="footer__item--in-link">Г-образные</a>
+                            </li>
+                            <li class="footer__item--in">
+                                <a href="#" class="footer__item--in-link">П-образные</a>
+                            </li>
+                            <li class="footer__item--in">
+                                <a href="#" class="footer__item--in-link">Угловые</a>
+                            </li>
+                            <li class="footer__item--in">
+                                <a href="#" class="footer__item--in-link">С барной стойкой</a>
+                            </li>
+                            <li class="footer__item--in">
+                                <a href="#" class="footer__item--in-link">С островом</a>
+                            </li>
+                            <li class="footer__item--in">
+                                <a href="#" class="footer__item--in-link">С пеналом</a>
+                            </li>
+                            <li class="footer__item--in">
+                                <a href="#" class="footer__item--in-link">Нестандартные</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="footer__up--item">
+                        <h3 class="footer__up--item-caption">Цвет</h3>
+                        <ul class="footer__list--child flex list-reset">
+                            <li class="footer__item--in footer__item--color">
+                                <span class="footer__item--in-circle footer__item--in-circle-one"></span><a href="#"
+                                    class="footer__item--in-link">Белые</a>
+                            </li>
+                            <li class="footer__item--in footer__item--color">
+                                <span class="footer__item--in-circle footer__item--in-circle-two"></span><a href="#"
+                                    class="footer__item--in-link">Серые</a>
+                            </li>
+                            <li class="footer__item--in footer__item--color">
+                                <span class="footer__item--in-circle footer__item--in-circle-three"></span><a href="#"
+                                    class="footer__item--in-link">Капучино</a>
+                            </li>
+                            <li class="footer__item--in footer__item--color">
+                                <span class="footer__item--in-circle footer__item--in-circle-four"></span><a href="#"
+                                    class="footer__item--in-link">Бежевые</a>
+                            </li>
+                            <li class="footer__item--in footer__item--color">
+                                <span class="footer__item--in-circle footer__item--in-circle-five"></span><a href="#"
+                                    class="footer__item--in-link">Оливковые</a>
+                            </li>
+                            <li class="footer__item--in footer__item--color"><span
+                                    class="footer__item--in-circle footer__item--in-circle-six"></span>
+                                <a href="#" class="footer__item--in-link">Мятный</a>
+                            </li>
+                            <li class="footer__item--in footer__item--color"><span
+                                    class="footer__item--in-circle footer__item--in-circle-seven"></span>
+                                <a href="#" class="footer__item--in-link">Черные</a>
+                            </li>
+                            <li class="footer__item--in footer__item--color"><span
+                                    class="footer__item--in-circle footer__item--in-circle-eight"></span>
+                                <a href="#" class="footer__item--in-link">Коричневые</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="footer__up--item">
+                        <h3 class="footer__up--item-caption">Размер</h3>
+                        <ul class="footer__list--child flex list-reset">
+                            <li class="footer__item--in">
+                                <a href="#" class="footer__item--in-link">Небольшие кухни</a>
+                            </li>
+                            <li class="footer__item--in">
+                                <a href="#" class="footer__item--in-link">Кухни 4 метра</a>
+                            </li>
+                            <li class="footer__item--in">
+                                <a href="#" class="footer__item--in-link">Кухни 5 метра</a>
+                            </li>
+                            <li class="footer__item--in">
+                                <a href="#" class="footer__item--in-link">Кухни 6 метра</a>
+                            </li>
+                            <li class="footer__item--in">
+                                <a href="#" class="footer__item--in-link">Кухни 8 метра</a>
+                            </li>
+                            <li class="footer__item--in">
+                                <a href="#" class="footer__item--in-link">Кухни 10 метра</a>
+                            </li>
+                            <li class="footer__item--in">
+                                <a href="#" class="footer__item--in-link">Кухни 12 метра</a>
+                            </li>
+                            <li class="footer__item--in">
+                                <a href="#" class="footer__item--in-link">Кухни 14 метра</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__down">
+                <div class="header__up footer__down-up flex">
+                    <div class="header__logo">
+                        <a href="#" class="logo">
+                            <svg class="svg-fotterlogo-dims">
+                                <use xlink:href="/img/sprite.svg#fotterlogo"></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="footer__social">
+                        <ul class="footer__social--list list-reset flex">
+                            <li class="footer__social--item footer__social--item--first">
+                                <a class="footer__social--link" href="#">
+                                    <svg class="svg-vk-new-dims">
+                                        <use xlink:href="/img/sprite.svg#vk-new"></use>
+                                    </svg>
+                                </a></li>
+                            <li class="footer__social--item">
+                                <a class="footer__social--link" href="#">
+                                    <svg class="svg-telegram-dims">
+                                        <use xlink:href="/img/sprite.svg#telegram"></use>
+                                    </svg>
+                                </a></li>
+                        </ul>
+                    </div>
+                    <div class="header__up--right">
+                        <ul class="list-adress list-reset flex">
+                            <li class="list-adress__item">
+                                <p class="fotter__list--item-descr list-adress__item--descr adress">
+                                    Москва, <br />
+                                    Дмитровское шоссе, д 62 стр 5
+                                </p>
+                            </li>
+                            <li class="list-adress__item between">
+                                <div class="child flex">
+                                    <a href="#" class="footer__phone phone-number"> +7 499 321-20-63 </a>
+                                    <button class="phone btn-reset">Заказать звонок</button>
+                                    <!-- <input class="phone" type="tel" aria-label="Заказать звонок" id="phone" name="phone"
+                                        placeholder="Заказать звонок" required
+                                        pattern="[+]{1}[0-9]{3}[0-9]{2}[0-9]{3}[0-9]{2}[0-9]{2}"> -->
+                                </div>
+                                <div class="glock">
+                                    <span class="footer__glock glock__span"> 9:00 - 20:00 </span>
+                                    <p class="footer__glock--descr glock__descr list-reset">ежедневно</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="header__down foot-down flex">
+                    <div class="header__down--left flex">
+                        <nav class="nav">
+                            <ul class="nav__list list-reset flex">
+                                <li class="nav__item">
+                                    <a class="footer__nav--link nav__link" href="#">Каталог</a>
+                                </li>
+                                <li class="nav__item">
+                                    <a class="footer__nav--link nav__link" href="#">Наши работы</a>
+                                </li>
+                                <li class="nav__item">
+                                    <a class="footer__nav--link nav__link" href="#">Отзывы</a>
+                                </li>
+                                <li class="nav__item">
+                                    <a class="footer__nav--link nav__link" href="#">Видео</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="header__down--right flex">
+                        <button class="footer__project project flex btn-reset">
+                            <a href="#" class="project__icon flex footer__icon">
+                                <svg class="svg-project-icon-dims">
+                                    <use xlink:href="/img/sprite.svg#project-icon"></use>
+                                </svg>
+                                <span>Проект + Расчет</span>
+                                <span class="help">5 вариантов за 5 минут</span>
+                            </a>
+                        </button>
+                        <button class="footer__line header__btn line flex btn-reset">
+                            <a class="line__icon flex" href="#">
+                                <svg class="svg-line-icon-dims">
+                                    <use xlink:href="/img/sprite.svg#line-icon"></use>
+                                </svg>
+                                <span class="footer__span">Вызвать замерщика с образцами</span>
+                            </a>
+                        </button>
+                    </div>
+                </div>
+                <p class="footer__text list-reset">
+                    © 2022 Аната-Кухни. Все ресурсы сайта www.anata-kitchen.ru, включая (но не ограничиваясь) текстовую,
+                    графическую, фотографическую и видео информацию, структуру, дизайн и оформление страниц, товарные
+                    знаки, доменное имя, фирменное наименование являются объектами авторского права и прав на
+                    интеллектуальную собственность, защищены российским законодательством и международными соглашениями
+                    об охране авторских прав и интеллектуальной собственности.
+                </p>
+            </div>
+        </div>
+    </footer>
+    <script src="app.js"></script>
+</body>
+
+</html>

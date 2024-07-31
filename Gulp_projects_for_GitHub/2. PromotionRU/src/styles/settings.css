@@ -1,0 +1,49 @@
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+
+img {
+    max-width: 100%;
+    object-fit: cover;
+}
+a {
+    text-decoration: none;
+}
+
+body {
+    min-width: 320px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container-s {
+    width: 100%;
+    max-height: 100vh;
+    /* overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    transition: scroll-snap-type .6s; */
+}
+
+.list-reset {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.container {
+    max-width: 1920px;
+    width: 100%;
+    padding: 0 405px;
+    margin: 0 auto;
+}

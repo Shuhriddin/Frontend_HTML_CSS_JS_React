@@ -1,0 +1,187 @@
+@import './color.css';
+
+.hero-five {
+    background: var(--redRibbon);
+    padding: 171px 0;
+}
+
+.hero-container--five {
+    position: relative;
+    background-image: url(../img/ppp.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.hero-five--box {
+    margin-bottom: 97px;
+}
+
+.hero-five--title {
+    margin: 0;
+    font-size: 46px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    color: var(--whiteColor);
+}
+
+.center-box {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 71px;
+}
+
+.button-content {
+    position: relative;
+    width: 323px;
+    height: 323px;
+    background-image: url(../img/five-mtc.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 1px solid var(--whiteColor);
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.70) 0%, rgba(255, 255, 255, 0.00) 61.15%), lightgray -59.22px -18.109px / 136.291% 106.477% no-repeat;
+    border-radius: 50%;
+}
+
+.button-content:nth-child(1) {
+    margin-right: 150px;
+}
+
+.inline-box--first {
+    position: absolute;
+    top: -15px;
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/five-mtc.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.inline-box--first a {
+    position: absolute;
+    top: 60%;
+    left: 22%;
+    display: inline-block;
+    width: 100%;
+    padding: 26px 50px;
+    border: 1px solid var(--whiteColor);
+    border-radius: 100px;
+    background: var(--whiteColor);
+}
+
+.inline-box--first p {
+    margin: 0;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    color: var(--scorpion);
+}
+.inline-box--first span {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px; 
+    color: var(--scorpion);
+}
+
+.button-content--second {
+    display: inline-block;
+    position: relative;
+    /* overflow-x: hidden; */
+}
+
+.inline-box--second {
+    position: absolute;
+    top: -25px;
+    left: 16px;
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/five-mtc2.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow-y: hidden;
+}
+
+
+.inline-box--link {
+    position: absolute;
+    top: 60%;
+    left: 22%;
+    display: inline-block;
+    width: 100%;
+    padding: 26px 50px;
+    border: 1px solid var(--whiteColor);
+    border-radius: 100px;
+    background: var(--whiteColor);
+    z-index: 1;
+}
+
+.inline-box--link p {
+    margin: 0;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    color: var(--scorpion);
+}
+.inline-box--link span {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px; 
+    color: var(--scorpion);
+}
+
+.hero-five--text {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-bottom: 70px;
+}
+
+.hero-five--text h3 {
+    max-width: 454px;
+    margin: 0;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 26px; /* 144.444% */
+    text-transform: uppercase;
+    color: var(--whiteColor);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.hero-five--text p {
+    margin: 0;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    color: var(--whiteColor);
+    text-align: center;
+}
+
+.left-item--five {
+    width: 17px;
+    height: 3px;
+    background: var(--whiteColor);
+    cursor: pointer;
+}
+
+.left-item--five:not(:last-child) {
+    margin-bottom: 30px;
+}
+
+.left-item--five:nth-child(5) {
+    width: 34px;
+    background: var(--scorpion);
+}

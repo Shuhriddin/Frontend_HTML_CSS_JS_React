@@ -1,0 +1,173 @@
+@import './color.css';
+
+.hero-thrid {
+    background: var(--redRibbon);
+    padding-bottom: 171px;
+    z-index: 9999;
+}
+
+.hero__container--thrid {
+    position: relative;
+    background-image: url(../img/ppp.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.nav {
+    z-index: 1000;
+}
+.nav__list {
+    z-index: 1000;
+}
+
+.photo-mall {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.hero-thrid--box {
+    max-width: 370px;
+    padding-bottom: 402px;
+    padding-top: 215px;
+}
+
+.hero-4--title {
+    font-size: 46px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    color: var(--whiteColor);
+    margin: 0;
+    margin-bottom: 50px;
+}
+
+
+.hero-thrid--text {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    color: var(--whiteColor);
+    margin: 0;
+}
+
+.hero-thrid--text span {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 26px;
+}
+
+.button-link {
+    display: block;
+    position: absolute;
+    top: 280px;
+    right: 650px;
+    border: 1px solid var(--whiteColor);
+    border-radius: 80px;
+    padding-top: 20px;
+    padding-right: 105px;
+    padding-bottom: 20px;
+    padding-left: 25px;
+    margin: 0;
+    background: var(--whiteColor);
+}
+
+.hero-thrid--span {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px;
+    text-transform: uppercase;
+    color: var(--scorpion);
+    margin: 0;
+    
+}
+.button-link span {
+    color: var(--scorpion);
+    display: inline-block;
+    font-size: 42px;
+}
+
+.girl {
+    position: absolute;
+    top: 23.1%;
+    right: 280px;
+}
+
+.ball-blck a {
+    position: absolute;
+    top: 70%;
+    right: 650px;
+    border: 1px solid var(--whiteColor);
+    padding: 37px 50px;
+    padding-bottom: 27px;
+    border-radius: 100px;
+    background: var(--whiteColor);
+}
+
+.ball-blck span {
+    font-size: 42px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px; /* 66.667% */
+    text-transform: uppercase;
+    color: var(--scorpion);
+}
+
+.ball-blck p {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px;
+    text-transform: uppercase;
+    color: var(--scorpion);
+}
+
+.ball-block a {
+    position: absolute;
+    bottom: 10%;
+    right: 258px;
+    border: 1px solid var(--whiteColor);
+    padding: 37px 50px;
+    padding-bottom: 27px;
+    border-radius: 100px;
+    background: var(--whiteColor);
+}
+
+.ball-block span {
+    font-size: 42px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px; /* 66.667% */
+    text-transform: uppercase;
+    color: var(--scorpion);
+}
+
+.ball-block p {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px;
+    text-transform: uppercase;
+    color: var(--scorpion);
+    margin: 0;
+}
+
+.left-item--thrid {
+    width: 20px;
+    height: 3px;
+    background: var(--whiteColor);
+    cursor: pointer;
+}
+
+.left-item--thrid:not(:last-child) {
+    margin-bottom: 30px;
+}
+
+.left-item--thrid:nth-child(4) {
+    width: 34px;
+    background: var(--scorpion);
+}

@@ -1,0 +1,123 @@
+@import './color.css';
+.projectss_container {
+    background-image: url(../img/news-image.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 500px;
+    position: relative;
+}
+
+.lettes-box {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.letters-box--span {
+    margin: 0;
+    margin-bottom: 10px;
+    font-family: Montserrat;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px; /* 160% */
+    text-transform: uppercase;
+    color: var(--whiteColor);
+}
+
+.letters-box--title {
+    margin: 0;
+    padding-bottom: 100px;
+    font-family: Montserrat;
+    font-size: 46px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    color: var(--whiteColor);
+}
+
+.prt-btn {
+    border: 0;
+    outline: 0;
+    background: transparent;
+}
+
+.exit {
+    position: relative;
+    width: 50px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* flex-direction: column; */
+    position: absolute;
+    top: 11%;
+    left: 30px;
+    cursor: pointer;
+}
+
+.exit span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: inline-flex;
+    width: 30px;
+    height: 3px;
+    color: var(--whiteColor);
+    background: var(--whiteColor);
+}
+
+.exit span:nth-child(1) {
+    transform: rotate(45deg);
+    transform-origin: center;
+}
+.exit span:nth-child(2) {
+    transform: rotate(-45deg);
+    transform-origin: center;
+}
+
+
+.lower-letters {
+    max-width: 900px;
+    padding-top: 50px;
+}
+
+.lower-letters--title {
+    margin: 0;
+    margin-bottom: 50px;
+    color: var(--miniShaft);
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 26px; /* 144.444% */
+}
+
+.lower-letters--txt {
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    margin: 0;
+    color: var(--miniShaft);
+    margin-bottom: 20px;
+}
+
+.lower-letters--last {
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    margin: 0;
+    color: var(--miniShaft);
+}

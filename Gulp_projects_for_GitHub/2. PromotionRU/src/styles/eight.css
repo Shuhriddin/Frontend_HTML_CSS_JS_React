@@ -1,0 +1,138 @@
+.st-8{
+    padding-top: 150px;
+    padding-bottom: 150px;
+}
+
+.command-title {
+    margin: 0;
+    margin-bottom: 50px;
+    font-family: Montserrat;
+    font-size: 100px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    color: var(--miniShaft);
+}
+
+
+.container-eight {
+    position: relative;
+}
+
+
+.left-numbers--hero-8 {
+    position: absolute;
+    top: 10%;
+    left: 2%;
+}
+.swiper-container {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.text-center-box {
+    position: relative;
+    width: 100%;
+    min-height: 380px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+}
+
+
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.text-box h2 {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 26px;
+    margin: 0;
+    color: var(--miniShaft);
+}
+
+.card__name {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    color: var(--miniShaft);
+}
+.swiper-pagination-bullet {
+    background: var(--whiteColor);
+}
+
+.right-text--box {
+    width: 50%;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.right-text--box svg {
+    width: 54px;
+    height: 50px;
+    position: absolute;
+    top: -25px;
+    left: -45px;
+    z-index: -1;
+}
+
+.tx-1 {
+    font-weight: 700;
+    line-height: 26px;
+    color: var(--miniShaft);
+    margin: 0;
+    margin-bottom: 30px;
+}
+
+.tx-2 {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    color: var(--scorpion);
+    margin: 0;
+}
+
+.hero-sev--title {
+    margin: 0;
+    margin-bottom: 50px;
+    font-family: Montserrat;
+    font-size: 100px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    color: var(--miniShaft);
+}
+
+.left-text--eigth {
+    margin-bottom: 30px;
+}
+
+.left-item--eigth {
+    width: 17px;
+    height: 3px;
+    background-color: var(--miniShaft);
+}
+.left-item--eigth:not(:last-child) {
+    margin-bottom: 30px;
+}
+
+.left-item--eigth:nth-child(8) {
+    width: 30px;
+    background-color: var(--redRibbon);
+}

@@ -1,0 +1,58 @@
+@import "_color";
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+.flex {
+  display: flex;
+}
+
+.section-offsets {
+  padding: 68px 0;
+}
+
+body {
+  min-width: 320px;
+  font-family: "Roboto", "TT Firs Neue", sans-serif;
+  font-weight: 400;
+  background: $fontcolor;
+  width: 100%;
+  margin: 0 auto;
+}
+
+path {
+  fill: inherit;
+  stroke: inherit;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 75px;
+  width: 100%;
+}

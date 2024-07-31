@@ -1,0 +1,1061 @@
+@import "_color";
+
+.header {
+  background-color: $bgcolorbody;
+  padding-top: 24px;
+  padding-bottom: 21px;
+}
+
+.header__wrapper {
+  background-color: $bgcolorbody;
+}
+
+.header__container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__left {
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: auto;
+}
+
+.header__nav {
+  width: 74%;
+}
+
+.svg-Logo-dims {
+  width: 190px;
+  height: 31px;
+}
+
+.logo:focus {
+  outline: 1px solid $addcolor;
+  border: none;
+  outline-offset: 2px;
+}
+
+.header__burger-btn {
+  position: relative;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background-color: transparent;
+  border-radius: 50%;
+  display: none;
+  z-index: 2;
+}
+
+.burger__line {
+  position: absolute;
+  left: 5px;
+  width: 30px;
+  height: 3px;
+  background-color: $fontcolor;
+  transition: transform .3s ease-in-out, opacity .3 ease-in-out, background-color .3s ease-in-out;
+}
+
+.header__media.open .header__burger-btn span:nth-child(1) {
+  transform: translateY(0) rotate(-45deg);
+}
+
+.header__media.open .header__burger-btn span:nth-child(2) {
+  opacity: 0;
+}
+
+.header__media.open .header__burger-btn span:nth-child(3) {
+  width: 30px;
+  transform: translateY(0) rotate(45deg);
+}
+
+.burger__line:first-child {
+  transform: translateY(-9px);
+}
+
+.burger__line:last-child {
+  width: 15px;
+  transform: translateY(9px);
+}
+
+.nav__list {
+  width: 94%;
+}
+
+.nav__item:not(:last-child) {
+  margin-right: 9.1%;
+}
+
+.nav__link {
+  font-family: TT Firs Neue;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: $fontcolor;
+  transition: color .3s ease-in-out, outline-offset .3s ease-in-out, outline .3s ease-in-out, background-color .3s ease-in-out;
+}
+
+.nav__link:focus {
+  background-color: $orangecol;
+  color: $fontcolor;
+  outline: none;
+  border: none;
+  outline-offset: 2px;
+}
+
+.nav__link:hover {
+  color: $hovercolor;
+}
+
+.nav__link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 12.5%;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.nav__link:active::after {
+  opacity: 1;
+}
+
+.nav__link:active {
+  color: $addcolor;
+  background-color: transparent;
+  outline: none;
+}
+
+.header__right {
+  width: 2%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.search-form {
+  display: none;
+  position: absolute;
+  right: 15px;
+  padding: 15px;
+  background-color: transparent;
+}
+
+.search-form-show {
+  display: flex;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: none;
+  color: $fontbodycol;
+  cursor: pointer;
+}
+
+.search-box:focus {
+  border: none;
+  outline: 1px solid $addcolor;
+  outline-offset: 2px;
+}
+
+.search-txt {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  border-bottom: 1px solid $fontcolor;
+  font-size: 65%;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: $mainescol;
+  transition: border-bottom .3s ease-in-out;
+}
+
+.search-txt:focus {
+  border-bottom: 1px solid $hovercolor;
+}
+
+.search-txt:hover {
+  border-bottom: 1px solid $hovercolor;
+}
+
+.search-txt:active {
+  border-bottom: 1px solid $addcolor;
+}
+
+.svg-loop-dims {
+  width: 25px;
+  height: 25px;
+}
+
+.svg-in-loop {
+  fill: $fontcolor;
+}
+
+.svg-close-dims {
+  width: 16px;
+  height: 25px;
+  background-color: transparent;
+}
+
+.svg-close-use {
+  stroke: $greycolor;
+  fill: none;
+  cursor: pointer;
+  transition: stroke .3s ease-in-out;
+}
+
+.svg-close-use:hover {
+  stroke: $hovercolor;
+}
+
+.header__medium {
+  display: none;
+}
+
+.header__media {
+  display: none;
+}
+
+
+.hero {
+  padding-bottom: 64px;
+  padding-top: 43px;
+}
+
+.visuall-hidden {
+  position: absolute;
+  overflow: hidden;
+  /* margin: -1px; */
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  border: 0;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /* grid-template-rows: repeat(auto-fill, 100%); */
+  gap: 24px;
+}
+
+.item {
+  display: grid;
+  align-self: stretch;
+  justify-self: stretch;
+}
+
+.item-2,
+.item-3,
+.item-4 {
+  height: 100%;
+}
+
+.item-1 {
+  background-image: url(/img/hero1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.item-1 {
+  grid-column: span 2;
+  grid-row: span 2;
+  height: 100%;
+}
+
+.item-2 {
+  grid-column: span 2;
+  grid-row: span 1;
+}
+
+.item-3,
+.item-4 {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+.in-descr {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  flex-direction: column;
+  padding-left: 61px;
+  padding-bottom: 65px;
+  position: relative;
+}
+
+.in-descr-span {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: $fontcolor;
+  margin-bottom: 5px;
+}
+
+.in-descr-title {
+  width: 89%;
+  font-family: TT Firs Neue;
+  font-size: 224%;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 103%;
+  color: $fontcolor;
+  margin-bottom: 19px;
+}
+
+.in-descr-btn {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  padding: 15px 20px;
+  background-color: $hovercolor;
+  border: none;
+  outline: none;
+  color: $fontcolor;
+  cursor: pointer;
+  transition: background-color .3s ease-in-out, outline .3s ease-in-out;
+}
+
+.in-descr-btn:focus {
+  background-color: $orangecol;
+  outline: 3px solid $addcolor;
+}
+
+.in-descr-btn:hover {
+  background-color: $hovercolor;
+  outline: none;
+  /* border: none; */
+}
+
+.in-descr-btn:active {
+  background-color: $addcolor;
+}
+
+.grid2-title {
+  font-family: TT Firs Neue;
+  color: $bgcolorbody;
+  font-size: 150%;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 87%;
+  margin-bottom: 21px;
+}
+
+.in-descr-link {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  font-size: 14px;
+  padding: 7px 15px;
+  color: $fontcolor;
+  background-color: $bgcolorbody;
+}
+
+.in-descr-link:focus {
+  border: none;
+  outline: 1px solid $addcolor;
+  outline-offset: 2px;
+}
+
+.item-img {
+  height: 99%;
+}
+
+// studio
+
+.studio {
+  background-color: $bgcolorbody;
+  padding-top: 31px;
+  padding-bottom: 42px;
+}
+
+.studio__container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.studio__left {
+  width: 48%;
+}
+
+.studio__caption {
+  color: $fontcolor;
+  font-family: TT Firs Neue;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 5px;
+}
+
+.studio__text {
+  color: $greycolor;
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+.studio__right {
+  width: 48.8%;
+  height: 100%;
+  padding-top: 32px;
+}
+
+.studio__form {
+  width: 100%;
+}
+
+.label-email {
+  width: 100%;
+  color: $fontcolor;
+}
+
+.studio__email {
+  padding-top: 16px;
+  padding-bottom: 19px;
+  padding-left: 23px;
+  background-color: $medianav;
+  color: $fontcolor;
+  outline: none;
+  border: none;
+  width: 75.4%;
+  margin-right: 26px;
+  transition: color .3s ease-in-out, outline .3s ease-in-out;
+}
+
+.studio__email:hover {
+  color: $hovercolor;
+}
+
+.studio__email:focus {
+  outline: 1px solid $hovercolor;
+}
+
+.studio__email:active {
+  outline: none;
+  color: $fontcolor;
+}
+
+.email-span {
+  font-family: TT Firs Neue;
+  color: $fontcolor;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 60px;
+}
+
+.studio__btn {
+  padding: 17px 29px;
+  background-color: $hovercolor;
+  color: $fontcolor;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: background-color .3s ease-in-out, outline .3s ease-in-out, color .3s ease-in-out;
+}
+
+.studio__btn:focus {
+  background-color: $hovercolor;
+  outline: 3px solid $hovercolor;
+  outline: none;
+  transition: all .3s ease-in-out;
+}
+
+.studio__btn:hover {
+  background-color: $orangecol;
+  border: none;
+  transition: all .3s ease-in-out;
+}
+
+.studio__btn:active {
+  background-color: $addcolor;
+  outline: none;
+  border: none;
+  transition: all .3s ease-in-out;
+}
+
+.studio__btn:active::after {
+  opacity: 0;
+}
+
+.studio__btn:valid pattern {
+  color: $hovercolor;
+}
+
+//projects
+.projects {
+  padding-top: 68px;
+  padding-bottom: 74px;
+}
+
+.projects__title {
+  font-family: TT Firs Neue;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  color: $bgcolorbody;
+  margin-bottom: 12px;
+}
+
+.projects__list {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(6, 79.5px);
+  gap: 30px;
+}
+
+.projects__item {
+  align-items: stretch;
+  justify-items: stretch;
+  height: 101%;
+}
+
+.projects__cards {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-basis: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.projects__item-4,
+.projects__item-5 {
+  grid-column: span 6;
+  grid-row: span 3;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.projects__item-1,
+.projects__item-2,
+.projects__item-3 {
+  grid-column: span 2;
+  grid-row: span 3;
+}
+
+.projects__item-6,
+.projects__item-7 {
+  width: 100%;
+  grid-column: span 3;
+  grid-row: span 3;
+}
+
+.projects__img {
+  width: 100%;
+  height: 91%;
+  margin-bottom: 15px;
+}
+
+.projects__item-4 {
+  background-image: url(../img/projects4.jpg);
+}
+
+.projects__item-5 {
+  background-image: url(../img/projects5.jpg);
+}
+
+.projects__img-3 {
+  height: 72%;
+}
+
+.in-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: column;
+  flex-basis: 100%;
+  height: 100%;
+}
+
+.projects__comment {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: $fontcolor;
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  padding: 6px 14px;
+  background-color: $bgcolorbody;
+}
+
+.projects__comment:focus {
+  border: none;
+  outline: 1px solid $addcolor;
+  outline-offset: 2px;
+}
+
+.projects__descr {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  color: $bgcolorbody;
+  margin-bottom: 10px;
+}
+
+.projects__hidden {
+  display: none;
+}
+
+.projects__caption {
+  width: 50%;
+  font-family: TT Firs Neue;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  color: $fontcolor;
+  margin-bottom: 5px;
+}
+
+.projects__data {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  color: $fontbodycol;
+  margin-top: auto;
+}
+
+.projects__data-full {
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px;
+  color: $fontcolor;
+  margin-bottom: 3px;
+}
+
+.projects__btn {
+  padding: 14px 19px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  color: $fontcolor;
+  background-color: transparent;
+  border: 3px solid $hovercolor;
+  cursor: pointer;
+  transition: background-color .3s ease-in-out, outline .3s ease-in-out;
+}
+
+.projects__btn:hover {
+  background-color: $hovercolor;
+}
+
+.projects__btn:focus {
+  outline: 1px solid $hovercolor;
+  background-color: $orangecol;
+}
+
+.projects__btn:active {
+  background-color: $addcolor;
+}
+
+.projects__text-full {
+  width: 50%;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  color: $fontcolor;
+}
+
+.projects__text-fullget {
+  width: 56%;
+}
+
+.text-box {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-basis: 100%;
+  height: 100%;
+}
+
+.projects__cards-5,
+.projects__cards-4 {
+  padding-top: 22px;
+  padding-left: 30px;
+  padding-bottom: 31px;
+}
+
+.projects__descr-last {
+  width: 90%;
+}
+
+// contacts
+
+.contacts {
+  padding-bottom: 68px;
+}
+
+.contacts__center {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.contacts__left {
+  width: 72%;
+  display: flex;
+  position: relative;
+}
+
+.contacts__title {
+  font-family: TT Firs Neue;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  color: $bgcolorbody;
+  margin-bottom: 19px;
+}
+
+.contacts__right {
+  width: 34.7%;
+}
+
+.contacts__caption {
+  font-family: TT Firs Neue;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 10px;
+  color: $bgcolorbody;
+  margin-bottom: 10px;
+}
+
+.contacts__descr {
+  width: 95%;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  color: $fontbodycol;
+  margin-bottom: 14px;
+}
+
+.contacts__form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.contacts__name {
+  width: 100%;
+  padding: 16px 23px;
+  margin-bottom: 22px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: $bgcolorbody;
+  background-color: $mainescol;
+  border: none;
+  outline: none;
+  transition: color .3s ease-in-out, outline .3s ease-in-out;
+}
+
+input[invalid] ::placeholder {
+  color: $hovercolor;
+}
+
+.contacts__name:focus {
+  outline: 1px solid $hovercolor;
+}
+
+.contacts__name:active {
+  color: $hovercolor;
+  border: none;
+  outline: none;
+}
+
+.text-area {
+  width: 100%;
+  min-height: 150px;
+  padding: 2px 5px;
+  height: 100%;
+  margin-bottom: 15px;
+  overflow: auto;
+  border: none;
+  outline: none;
+  background-color: $mainescol;
+  transition: color .3s ease-in-out, outline .3s ease-in-out;
+}
+
+.text-area:focus {
+  outline: 1px solid $hovercolor;
+}
+
+.text-area:active {
+  color: $hovercolor;
+  border: none;
+  outline: none;
+}
+
+.text-area::placeholder {
+  font-size: 16px;
+}
+
+.contacts__btn {
+  padding: 15px 24px;
+  background-color: $hovercolor;
+  color: $fontcolor;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: background-color .3s ease-in-out, outline .3s ease-in-out;
+}
+
+.contacts__btn:focus {
+  background-color: $hovercolor;
+  outline: none;
+}
+
+.contacts__btn:hover {
+  outline: 3px solid $hovercolor;
+  background-color: $orangecol;
+  border: none;
+}
+
+.contacts__btn:active {
+  background-color: $addcolor;
+  outline: none;
+  border: none;
+}
+
+.contacts__btn:active::after {
+  opacity: 0;
+}
+
+.contacts__btn:valid pattern {
+  color: $hovercolor;
+}
+
+.contacts__adress {
+  position: relative;
+  width: 94%;
+  height: 100%;
+  opacity: 1;
+  background: $rgbabg;
+}
+
+.contacts__box {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  height: 106%;
+  width: 83%;
+  padding-left: 60px;
+}
+
+.box-title {
+  font-family: TT Firs Neue;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  color: $fontcolor;
+}
+
+.box-descr {
+  max-width: 97%;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+  color: $greycolor;
+}
+
+.phone-number {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: $hovercolor;
+}
+
+.phone-number:focus {
+  border: none;
+  outline: 1px solid $addcolor;
+  outline-offset: 2px;
+  color: $fontcolor;
+  background-color: $orangecol;
+}
+
+.svg-phone-dims {
+  width: 22px;
+  height: 22px;
+}
+
+.svg-close-dims-s {
+  position: absolute;
+  top: 4%;
+  right: 5%;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+/* footer */
+
+.footer {
+  background-color: $bgcolorbody;
+  padding-top: 1.2%;
+  padding-bottom: 1%;
+}
+
+.footer__container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__left {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+}
+
+.svg-footlogo-dims {
+  width: 191px;
+  height: 31px;
+  margin-bottom: 1%;
+}
+
+.footer__logo:focus {
+  outline: 1px solid $orangecol;
+  outline-offset: 3px;
+}
+
+.footer__span {
+  font-family: TT Firs Neue;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: $fontcolor;
+}
+
+.footer__center {
+  width: 38%;
+}
+
+.footer__descr {
+  width: 72%;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  color: $greycolor;
+}
+
+.footer__right {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.footer__title {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  color: $greycolor;
+  margin-bottom: 8px;
+}
+
+.footer__list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer__item:first-child {
+  margin-right: 20px;
+}
+
+.footer__link {
+  transition: fill .3s ease-in-out;
+}
+
+.footer__link:focus {
+  outline: 1px solid $orangecol;
+  outline-offset: 2px;
+}
+
+.svg-ok-dims,
+.svg-vk-dims {
+  width: 30px;
+  height: 30px;
+  fill: $greycolor;
+  transition: all .3s ease-in-out;
+
+  .svg-ok-dims-use {
+    &:hover {
+      fill: $hovercolor;
+      transition: .3s ease-in-out;
+    }
+
+    &:focus {
+      fill: $orangecol;
+      transition: .3s ease-in-out;
+    }
+
+    &:active {
+      fill: $addcolor;
+      transition: .3s ease-in-out;
+    }
+  }
+}
+
+.svg-ok-dims-use {
+  &:hover {
+    fill: aqua;
+  }
+}
+
+.svg-vk-dims:hover {
+  fill: $hovercolor;
+}
